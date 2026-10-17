@@ -361,105 +361,72 @@ footer .top{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-betw
 </style>
 
 <style id="ui">
-html{scroll-behavior:smooth;scroll-padding-top:62px}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* липкая полоса */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(242,245,240,.93);
-  backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid var(--line);
-  transform:translateY(-100%);transition:transform .25s ease}
-.topbar.show{transform:none}
-.tbin{max-width:1060px;margin:0 auto;padding:0 20px;height:52px;display:flex;align-items:center;gap:18px}
-.tblogo{display:flex;align-items:center;border:0;flex:0 0 auto}
-.tblogo img{height:30px;width:auto;mix-blend-mode:multiply}
-.tbnav{display:flex;gap:16px;margin-left:4px;flex:1 1 auto;min-width:0}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--ground);
+  border-bottom:1px solid var(--line);box-shadow:0 6px 24px rgba(18,31,27,.10);
+  transition:background .3s ease,box-shadow .3s ease,border-color .3s ease}
+/* пока мы на первом экране, полоса прозрачная поверх фотографии */
+.topbar.over{background:linear-gradient(180deg,rgba(6,14,11,.42),rgba(6,14,11,0));
+  border-bottom-color:transparent;box-shadow:none}
+.topbar.over .tblogo{opacity:0;pointer-events:none}
+.topbar.over .tbnav a{color:rgba(255,255,255,.9);text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.topbar.over .tbnav a:hover,.topbar.over .tbnav a.here{color:#fff}
+.topbar.over .tbnav a.here::after{background:#fff}
+.topbar.over .tbprog{opacity:0}
+.topbar.over .tbjoin{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.55);
+  backdrop-filter:blur(7px);padding:11px 21px}
 .topbar a{border-bottom:0!important;text-decoration:none}
-.tbnav a{font-family:"Oswald",sans-serif;font-weight:400;font-size:.72rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ink-2);white-space:nowrap;padding:4px 0}
+.tbin{max-width:1280px;margin:0 auto;padding:0 clamp(16px,3vw,28px);height:68px;
+  display:flex;align-items:center;gap:clamp(14px,2.4vw,30px)}
+.tblogo{display:flex;align-items:center;flex:0 0 auto}
+.tblogo img{height:42px;width:auto;mix-blend-mode:multiply}
+.tbnav{display:flex;gap:clamp(10px,1.7vw,22px);flex:1 1 auto;min-width:0;justify-content:center}
+.tbnav a{position:relative;font-family:"Oswald",sans-serif;font-weight:500;
+  font-size:clamp(.72rem,1vw,.84rem);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);
+  white-space:nowrap;padding:24px 0;transition:color .15s}
+.tbnav a::after{content:"";position:absolute;left:0;right:0;bottom:18px;height:3px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
 .tbnav a:hover{color:var(--ink)}
-.tbnav a.here{color:var(--gold);box-shadow:inset 0 -2px 0 var(--gold)}
-.vtoggle{display:flex;border:1px solid var(--line);background:var(--surface);flex:0 0 auto}
-.vtoggle button{font-family:"Oswald",sans-serif;font-weight:500;font-size:.68rem;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--ink-3);background:none;border:0;padding:6px 11px;cursor:pointer;
-  transition:background .15s,color .15s}
-.vtoggle button.on{background:var(--ink);color:#fff}
-.tbjoin{font-family:"Oswald",sans-serif;font-weight:500;font-size:.68rem;letter-spacing:.12em;
-  text-transform:uppercase;background:var(--gold);color:#fff;padding:7px 13px;border:0;white-space:nowrap;flex:0 0 auto}
-.tbprog{height:2px;background:transparent}
-.tbprog i{display:block;height:2px;width:0;background:var(--gold);transition:width .1s linear}
-@media(max-width:900px){.tbnav{display:none}.tbin{gap:12px;justify-content:space-between}}
-@media(max-width:420px){.tbjoin{display:none}}
+.tbnav a.here{color:var(--gold)}
+.tbnav a.here::after{transform:scaleX(1)}
+.tbjoin{font-family:"Oswald",sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.12em;
+  text-transform:uppercase;background:var(--gold);color:#fff!important;padding:12px 22px;
+  white-space:nowrap;flex:0 0 auto;transition:background .15s}
+.tbjoin:hover{background:var(--gold-bright)}
+.tbprog{height:4px;background:var(--surface-2);transition:opacity .3s ease}
+.tbprog i{display:block;height:4px;width:0;background:var(--gold);transition:width .08s linear}
+@media(max-width:1000px){.tbnav{display:none}.tbin{height:60px;justify-content:space-between}
+  .tblogo img{height:36px}.tbjoin{padding:10px 16px;font-size:.74rem}}
 
-/* переключение вариантов */
-.v19only{transition:opacity .2s}
-body[data-variant="15"] .v19only{display:none!important}
-body[data-variant="19"] .v15only{display:none!important}
-.fmt{transition:border-color .2s,box-shadow .2s}
-.vhint{margin-top:14px;font-size:.88rem;color:var(--ink-3);display:none}
-body[data-variant="15"] .vhint{display:block}
-
-/* калькулятор */
-.calc{margin-top:34px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);padding:clamp(18px,3vw,26px)}
-.calc .eyebrow{color:var(--gold-bright)}
-.calc h3{color:#fff;margin:7px 0 18px}
-.calcctl{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-bottom:20px}
-.ctl{display:grid;gap:7px}
-.ctl>span{font-family:"Oswald",sans-serif;font-weight:400;font-size:.68rem;letter-spacing:.14em;
-  text-transform:uppercase;color:#8C9E92}
-.seg{display:flex;border:1px solid rgba(255,255,255,.2)}
-.seg button{flex:1;font-family:"JetBrains Mono",monospace;font-size:.82rem;color:#B9C8BC;background:none;
-  border:0;padding:8px 4px;cursor:pointer;transition:background .15s,color .15s;border-right:1px solid rgba(255,255,255,.12)}
-.seg button:last-child{border-right:0}
-.seg button.on{background:var(--gold);color:#fff}
-.calcout{display:grid;gap:1px;background:rgba(255,255,255,.14);grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.co{background:#0E1C18;padding:15px 17px;display:grid;gap:5px}
-.co b{font-family:"Oswald",sans-serif;font-weight:600;font-size:1.5rem;line-height:1.05;color:#fff}
-.co span{font-size:.8rem;line-height:1.4;color:#8C9E92}
-.co.total b{color:var(--gold-bright);font-size:1.85rem}
-.co em{display:block;font-style:normal;font-family:"JetBrains Mono",monospace;font-size:.78rem;color:#8C9E92;margin-top:2px}
-.calc .note{margin-top:14px;color:#8C9E92}
-@media(max-width:620px){
-  .calcctl{grid-template-columns:1fr;gap:12px}
-  .calcout{grid-template-columns:1fr}
-  .co b{font-size:1.35rem}
-  .co.total b{font-size:1.6rem}
-  .calc{margin-top:26px}
-}
-
-
-/* карта рисуется при появлении */
-.nzmap .rd,.nzmap .fly,.nzmap .ferry,.nzmap .boat{stroke-dashoffset:var(--len,0)}
-.nzmap.draw .rd-n{animation:drawline 1.15s ease-out .1s forwards}
-.nzmap.draw .fly{animation:drawline .7s ease-out 1.15s forwards}
-.nzmap.draw .ferry{animation:drawline .5s ease-out .9s forwards}
-.nzmap.draw .rd-s{animation:drawline 1.5s ease-out 1.75s forwards}
-.nzmap.draw .boat{animation:drawline .5s ease-out 3.1s forwards}
-@keyframes drawline{to{stroke-dashoffset:0}}
-.nzmap g[data-pin]{opacity:0}
-.nzmap.draw g[data-pin]{animation:pinin .4s ease-out forwards}
-@keyframes pinin{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}
-.nzmap g[data-pin]{transform-box:fill-box;transform-origin:center}
+/* карта рисуется по мере прокрутки */
+.nzmap .rd{stroke-dashoffset:0}
+.nzmap.live .ferry,.nzmap.live .fly,.nzmap.live .boat{opacity:0}
+.nzmap.live g[data-pin]{opacity:0;transform-box:fill-box;transform-origin:center}
 @media(prefers-reduced-motion:reduce){
-  .nzmap .rd,.nzmap .fly,.nzmap .ferry,.nzmap .boat{stroke-dashoffset:0!important;animation:none!important}
-  .nzmap g[data-pin]{opacity:1!important;animation:none!important}
+  .nzmap.live .ferry,.nzmap.live .fly,.nzmap.live .boat{opacity:1!important}
+  .nzmap.live g[data-pin]{opacity:1!important;transform:none!important}
+  .nzmap .rd{stroke-dashoffset:0!important}
 }
 </style>
 </head>
 <body>
-<nav class="topbar" id="topbar" aria-label="Навигация по странице">
+<nav class="topbar over" id="topbar" aria-label="Навигация по странице">
   <div class="tbin">
     <a class="tblogo" href="#top" aria-label="В начало"><img src="img/logo.png" alt=""></a>
     <div class="tbnav">
+      <a href="#why">Ради чего</a>
       <a href="#route">Маршрут</a>
       <a href="#days">По дням</a>
+      <a href="#wine">Вино</a>
+      <a href="#extra">Адреналин</a>
       <a href="#stay">Отели</a>
       <a href="#money">Цены</a>
       <a href="#plan">Что дальше</a>
     </div>
-    <div class="vtoggle" data-name="variant" role="group" aria-label="Вариант поездки">
-      <button type="button" data-v="15">15 дней</button>
-      <button type="button" data-v="19">19 дней</button>
-    </div>
+    
     <a class="tbjoin" href="https://t.me/+La_7w6y0A0BiMzYy" target="_blank" rel="noopener">В чат</a>
   </div>
   <div class="tbprog"><i></i></div>
@@ -513,7 +480,7 @@ body[data-variant="15"] .vhint{display:block}
   </div>
 </section>
 
-<figure class="plate capright">
+<figure class="plate capright" id="why">
   <img src="img/fiord-navigator.jpg" alt="Судно под парусами в Даутфул-Саунде" style="object-position:center 62%">
   <figcaption><div class="wrap">
     <div class="cap-k">Фьордленд</div>
@@ -631,14 +598,14 @@ body[data-variant="15"] .vhint{display:block}
   <polyline points="1270.3,484.4 1315.3,476.2" class="ferry"></polyline><polyline points="191.3,1947.4 255.1,1967.8" class="boat"></polyline>
   <text x="990" y="800" text-anchor="middle" class="isl">Северный<tspan x="990" dy="58">остров</tspan></text>
   <text x="430" y="1560" text-anchor="middle" class="isl">Южный<tspan x="430" dy="58">остров</tspan></text>
-  <g><circle cx="1270.3" cy="484.4" r="26" class="pt"></circle><text x="1270.3" y="497.4" text-anchor="middle" class="num">2</text></g><g><circle cx="1315.3" cy="476.2" r="26" class="pt"></circle><text x="1315.3" y="489.2" text-anchor="middle" class="num">3</text></g><g><circle cx="1319.0" cy="724.7" r="26" class="pt"></circle><text x="1319.0" y="737.7" text-anchor="middle" class="num">4</text></g><g><circle cx="1400.7" cy="658.4" r="26" class="pt"></circle><text x="1400.7" y="671.4" text-anchor="middle" class="num">4</text></g><g><circle cx="1481.2" cy="703.6" r="26" class="pt"></circle><text x="1481.2" y="716.6" text-anchor="middle" class="num">5</text></g><g class="v19only"><circle cx="1574.9" cy="934.2" r="31" class="pt pt-extra"></circle><text x="1574.9" y="947.2" text-anchor="middle" class="num only wide">6–7</text></g><g><circle cx="1455.6" cy="796.8" r="26" class="pt"></circle><text x="1455.6" y="809.8" text-anchor="middle" class="num">8</text></g><g><circle cx="405.6" cy="1876.1" r="31" class="pt"></circle><text x="405.6" y="1889.1" text-anchor="middle" class="num wide">9·19</text></g><g><circle cx="473.0" cy="1819.8" r="31" class="pt"></circle><text x="473.0" y="1832.8" text-anchor="middle" class="num wide">10–12</text></g><g><circle cx="608.9" cy="1655.5" r="26" class="pt"></circle><text x="608.9" y="1668.5" text-anchor="middle" class="num">13</text></g><g><circle cx="662.9" cy="1701.5" r="26" class="pt"></circle><text x="662.9" y="1714.5" text-anchor="middle" class="num">14</text></g><g><circle cx="479.9" cy="1879.9" r="26" class="pt"></circle><text x="479.9" y="1892.9" text-anchor="middle" class="num">15</text></g><g><circle cx="191.3" cy="1947.4" r="31" class="pt"></circle><text x="191.3" y="1960.4" text-anchor="middle" class="num wide">16–17</text></g><g class="v19only"><circle cx="366.1" cy="1845.2" r="26" class="pt pt-extra"></circle><text x="366.1" y="1858.2" text-anchor="middle" class="num only">18</text></g>
+  <g><circle cx="1270.3" cy="484.4" r="26" class="pt"></circle><text x="1270.3" y="497.4" text-anchor="middle" class="num">2</text></g><g><circle cx="1315.3" cy="476.2" r="26" class="pt"></circle><text x="1315.3" y="489.2" text-anchor="middle" class="num">3</text></g><g><circle cx="1319.0" cy="724.7" r="26" class="pt"></circle><text x="1319.0" y="737.7" text-anchor="middle" class="num">4</text></g><g><circle cx="1400.7" cy="658.4" r="26" class="pt"></circle><text x="1400.7" y="671.4" text-anchor="middle" class="num">4</text></g><g><circle cx="1481.2" cy="703.6" r="26" class="pt"></circle><text x="1481.2" y="716.6" text-anchor="middle" class="num">5</text></g><g class=""><circle cx="1574.9" cy="934.2" r="31" class="pt pt-extra"></circle><text x="1574.9" y="947.2" text-anchor="middle" class="num only wide">6–7</text></g><g><circle cx="1455.6" cy="796.8" r="26" class="pt"></circle><text x="1455.6" y="809.8" text-anchor="middle" class="num">8</text></g><g><circle cx="405.6" cy="1876.1" r="31" class="pt"></circle><text x="405.6" y="1889.1" text-anchor="middle" class="num wide">9·19</text></g><g><circle cx="473.0" cy="1819.8" r="31" class="pt"></circle><text x="473.0" y="1832.8" text-anchor="middle" class="num wide">10–12</text></g><g><circle cx="608.9" cy="1655.5" r="26" class="pt"></circle><text x="608.9" y="1668.5" text-anchor="middle" class="num">13</text></g><g><circle cx="662.9" cy="1701.5" r="26" class="pt"></circle><text x="662.9" y="1714.5" text-anchor="middle" class="num">14</text></g><g><circle cx="479.9" cy="1879.9" r="26" class="pt"></circle><text x="479.9" y="1892.9" text-anchor="middle" class="num">15</text></g><g><circle cx="191.3" cy="1947.4" r="31" class="pt"></circle><text x="191.3" y="1960.4" text-anchor="middle" class="num wide">16–17</text></g><g class=""><circle cx="366.1" cy="1845.2" r="26" class="pt pt-extra"></circle><text x="366.1" y="1858.2" text-anchor="middle" class="num only">18</text></g>
 </svg>
         <div class="mapfoot">
-          <p class="mapnote v19only">Цифры на карте это номера дней. Оранжевым отмечены те, что есть только в полном варианте: в коротком варианте выпадают Напиер с Хокс-Бей и два финальных дня в Квинстауне, а Даутфул становится дневным круизом вместо ночёвки на борту. В коротком выходит около 1 720 километров.</p>
-          <p class="mapnote v15only">Цифры на карте это номера дней, нумерация общая с полным вариантом. В коротком нет Напиера с Хокс-Бей и двух финальных дней в Квинстауне, а Даутфул идёт дневным круизом вместо ночёвки на борту. За рулём выходит около 1 720 километров.</p>
+          <p class="mapnote">Цифры на карте это номера дней. Оранжевым отмечены те, что есть только в полном варианте: в коротком варианте выпадают Напиер с Хокс-Бей и два финальных дня в Квинстауне, а Даутфул становится дневным круизом вместо ночёвки на борту. В коротком выходит около 1 720 километров.</p>
+          
           <div class="maplegend">
           <span><i class="k-n"></i>Северный остров</span>
-          <span class="v19only"><i class="k-x"></i>Дни только полного варианта</span>
+          <span><i class="k-x"></i>Дни только полного варианта</span>
           <span><i class="k-s"></i>Южный остров</span>
           <span><i class="k-f"></i>Перелёт между островами</span>
           <span><i class="k-b"></i>Автопаром на Уаихеке и катер к фьорду</span>
@@ -648,7 +615,7 @@ body[data-variant="15"] .vhint{display:block}
       <div class="daytable">
         <table class="dayt">
           <thead><tr><th>День</th><th>Куда едем</th><th>За рулём</th></tr></thead>
-          <tbody><tr class="flyrow"><td class="dnum">✈<span class="ddate">28.12</span></td><td class="dtxt">Москва → Шанхай <span class="dnote">вылет 20:25 мск, прилёт в Шанхай 10:35</span></td><td class="dkm">9,5 ч в воздухе</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">29.12</span></td><td class="dtxt">Шанхай, стыковка <span class="dnote">прилёт 10:35, вылет 00:05. Безвизовый транзит, до центра 20 минут: поезд на магнитной подушке плюс метро: Бунд, Юйюань, ужин в Пудуне, в аэропорту за три часа. Багаж до Окленда</span></td><td class="dkm">13,5 ч</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">30.12</span></td><td class="dtxt">Шанхай → Окленд <span class="dnote">прилёт 30 декабря в 15:45</span></td><td class="dkm">12 ч в воздухе</td></tr><tr class=""><td class="dnum">1<span class="ddate">30.12</span></td><td class="dtxt">Окленд <span class="dnote">прилёт в 15:45, трансфер в отель, вечер свободный</span></td><td class="dkm">трансфер</td></tr><tr class=""><td class="dnum">2<span class="ddate">31.12</span></td><td class="dtxt">Окленд <span class="dnote">гид: Маунт-Иден и набережная, вечером Новый год</span></td><td class="dkm">пешком</td></tr><tr class=""><td class="dnum">3<span class="ddate">01.01</span></td><td class="dtxt">Уаихеке <span class="dnote">берём машины, автопаром</span></td><td class="dkm">автопаром</td></tr><tr class=""><td class="dnum">4<span class="ddate">02.01</span></td><td class="dtxt">Окленд → Вайтомо → Хоббитон → Роторуа <span class="dnote">пещеры со светлячками и Шир</span></td><td class="dkm">375 км</td></tr><tr class=""><td class="dnum">5<span class="ddate">03.01</span></td><td class="dtxt">Роторуа <span class="dnote">гейзеры и маори, на месте</span></td><td class="dkm">60 км по городу</td></tr><tr class="only18row v19only"><td class="dnum">6<span class="ddate">04.01</span></td><td class="dtxt">Роторуа → Напиер <span class="dnote">город целиком в ар-деко</span></td><td class="dkm">220 км</td></tr><tr class="only18row v19only"><td class="dnum">7<span class="ddate">05.01</span></td><td class="dtxt">Напиер, Хокс-Бей <span class="dnote">винный день, на месте</span></td><td class="dkm">80 км по региону</td></tr><tr class=""><td class="dnum">8<span class="ddate">06.01</span></td><td class="dtxt">Напиер → Таупо <span class="dnote">водопад Хука на катере</span></td><td class="dkm">145 км</td></tr><tr class=""><td class="dnum">9<span class="ddate">07.01</span></td><td class="dtxt">Таупо → Окленд, перелёт в Квинстаун <span class="dnote">сдаём машину, берём вторую на юге</span></td><td class="dkm">270 км + 2 ч лёта</td></tr><tr class=""><td class="dnum">10<span class="ddate">08.01</span></td><td class="dtxt">Квинстаун → Ванака <span class="dnote">через перевал Кроун-Рейндж</span></td><td class="dkm">70 км</td></tr><tr class=""><td class="dnum">11<span class="ddate">09.01</span></td><td class="dtxt">Ванака <span class="dnote">утром Rippon, дальше свободно</span></td><td class="dkm">без переезда</td></tr><tr class=""><td class="dnum">12<span class="ddate">10.01</span></td><td class="dtxt">Ванака <span class="dnote">свободный день: Рой-Пик, озеро, кофейни</span></td><td class="dkm">без переезда</td></tr><tr class=""><td class="dnum">13<span class="ddate">11.01</span></td><td class="dtxt">Ванака → Маунт-Кук <span class="dnote">пикник на Пукаки, трек по долине Хукер</span></td><td class="dkm">210 км</td></tr><tr class=""><td class="dnum">14<span class="ddate">12.01</span></td><td class="dtxt">Маунт-Кук → Текапо <span class="dnote">люпины, ночью обсерватория</span></td><td class="dkm">105 км</td></tr><tr class=""><td class="dnum">15<span class="ddate">13.01</span></td><td class="dtxt">Текапо → Банноберн → Квинстаун <span class="dnote">винный день</span></td><td class="dkm">260 км</td></tr><tr class=""><td class="dnum">16<span class="ddate">14.01</span></td><td class="dtxt">Квинстаун → Манапоури → Даутфул-Саунд <span class="dnote">катер через озеро и перевал во фьорд</span></td><td class="dkm">175 км</td></tr><tr class="only18row v19only"><td class="dnum">17<span class="ddate">15.01</span></td><td class="dtxt">Даутфул-Саунд → Квинстаун <span class="dnote">возвращаемся из фьорда</span></td><td class="dkm">175 км</td></tr><tr class="only18row v19only"><td class="dnum">18<span class="ddate">16.01</span></td><td class="dtxt">Квинстаун → Гленорчи → Квинстаун <span class="dnote">джипы в долину Парадайз</span></td><td class="dkm">95 км</td></tr><tr class=""><td class="dnum">19<span class="ddate">17.01</span></td><td class="dtxt">Вылет <span class="dnote">сдаём машину, перелёт в Окленд</span></td><td class="dkm">без переезда</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">17.01</span></td><td class="dtxt">Окленд → Шанхай <span class="dnote">вылет вечером, в коротком варианте это 13 января</span></td><td class="dkm">12 ч в воздухе</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">18.01</span></td><td class="dtxt">Шанхай → Москва <span class="dnote">стыковка около 8 часов, дома около 18:30. В коротком варианте 14 января</span></td><td class="dkm">9,5 ч в воздухе</td></tr></tbody>
+          <tbody><tr class="flyrow"><td class="dnum">✈<span class="ddate">28.12</span></td><td class="dtxt">Москва → Шанхай <span class="dnote">вылет 20:25 мск, прилёт в Шанхай 10:35</span></td><td class="dkm">9,5 ч в воздухе</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">29.12</span></td><td class="dtxt">Шанхай, стыковка <span class="dnote">прилёт 10:35, вылет 00:05. Безвизовый транзит, до центра 20 минут: поезд на магнитной подушке плюс метро: Бунд, Юйюань, ужин в Пудуне, в аэропорту за три часа. Багаж до Окленда</span></td><td class="dkm">13,5 ч</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">30.12</span></td><td class="dtxt">Шанхай → Окленд <span class="dnote">прилёт 30 декабря в 15:45</span></td><td class="dkm">12 ч в воздухе</td></tr><tr class=""><td class="dnum">1<span class="ddate">30.12</span></td><td class="dtxt">Окленд <span class="dnote">прилёт в 15:45, трансфер в отель, вечер свободный</span></td><td class="dkm">трансфер</td></tr><tr class=""><td class="dnum">2<span class="ddate">31.12</span></td><td class="dtxt">Окленд <span class="dnote">гид: Маунт-Иден и набережная, вечером Новый год</span></td><td class="dkm">пешком</td></tr><tr class=""><td class="dnum">3<span class="ddate">01.01</span></td><td class="dtxt">Уаихеке <span class="dnote">берём машины, автопаром</span></td><td class="dkm">автопаром</td></tr><tr class=""><td class="dnum">4<span class="ddate">02.01</span></td><td class="dtxt">Окленд → Вайтомо → Хоббитон → Роторуа <span class="dnote">пещеры со светлячками и Шир</span></td><td class="dkm">375 км</td></tr><tr class=""><td class="dnum">5<span class="ddate">03.01</span></td><td class="dtxt">Роторуа <span class="dnote">гейзеры и маори, на месте</span></td><td class="dkm">60 км по городу</td></tr><tr class="only18row"><td class="dnum">6<span class="ddate">04.01</span></td><td class="dtxt">Роторуа → Напиер <span class="dnote">город целиком в ар-деко</span></td><td class="dkm">220 км</td></tr><tr class="only18row"><td class="dnum">7<span class="ddate">05.01</span></td><td class="dtxt">Напиер, Хокс-Бей <span class="dnote">винный день, на месте</span></td><td class="dkm">80 км по региону</td></tr><tr class=""><td class="dnum">8<span class="ddate">06.01</span></td><td class="dtxt">Напиер → Таупо <span class="dnote">водопад Хука на катере</span></td><td class="dkm">145 км</td></tr><tr class=""><td class="dnum">9<span class="ddate">07.01</span></td><td class="dtxt">Таупо → Окленд, перелёт в Квинстаун <span class="dnote">сдаём машину, берём вторую на юге</span></td><td class="dkm">270 км + 2 ч лёта</td></tr><tr class=""><td class="dnum">10<span class="ddate">08.01</span></td><td class="dtxt">Квинстаун → Ванака <span class="dnote">через перевал Кроун-Рейндж</span></td><td class="dkm">70 км</td></tr><tr class=""><td class="dnum">11<span class="ddate">09.01</span></td><td class="dtxt">Ванака <span class="dnote">утром Rippon, дальше свободно</span></td><td class="dkm">без переезда</td></tr><tr class=""><td class="dnum">12<span class="ddate">10.01</span></td><td class="dtxt">Ванака <span class="dnote">свободный день: Рой-Пик, озеро, кофейни</span></td><td class="dkm">без переезда</td></tr><tr class=""><td class="dnum">13<span class="ddate">11.01</span></td><td class="dtxt">Ванака → Маунт-Кук <span class="dnote">пикник на Пукаки, трек по долине Хукер</span></td><td class="dkm">210 км</td></tr><tr class=""><td class="dnum">14<span class="ddate">12.01</span></td><td class="dtxt">Маунт-Кук → Текапо <span class="dnote">люпины, ночью обсерватория</span></td><td class="dkm">105 км</td></tr><tr class=""><td class="dnum">15<span class="ddate">13.01</span></td><td class="dtxt">Текапо → Банноберн → Квинстаун <span class="dnote">винный день</span></td><td class="dkm">260 км</td></tr><tr class=""><td class="dnum">16<span class="ddate">14.01</span></td><td class="dtxt">Квинстаун → Манапоури → Даутфул-Саунд <span class="dnote">катер через озеро и перевал во фьорд</span></td><td class="dkm">175 км</td></tr><tr class="only18row"><td class="dnum">17<span class="ddate">15.01</span></td><td class="dtxt">Даутфул-Саунд → Квинстаун <span class="dnote">возвращаемся из фьорда</span></td><td class="dkm">175 км</td></tr><tr class="only18row"><td class="dnum">18<span class="ddate">16.01</span></td><td class="dtxt">Квинстаун → Гленорчи → Квинстаун <span class="dnote">джипы в долину Парадайз</span></td><td class="dkm">95 км</td></tr><tr class=""><td class="dnum">19<span class="ddate">17.01</span></td><td class="dtxt">Вылет <span class="dnote">сдаём машину, перелёт в Окленд</span></td><td class="dkm">без переезда</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">17.01</span></td><td class="dtxt">Окленд → Шанхай <span class="dnote">вылет вечером, в коротком варианте это 13 января</span></td><td class="dkm">12 ч в воздухе</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">18.01</span></td><td class="dtxt">Шанхай → Москва <span class="dnote">стыковка около 8 часов, дома около 18:30. В коротком варианте 14 января</span></td><td class="dkm">9,5 ч в воздухе</td></tr></tbody>
         </table>
       </div>
     </div>
@@ -659,12 +626,12 @@ body[data-variant="15"] .vhint{display:block}
   <div class="wrap">
     <div class="shead">
       <span class="eyebrow">День за днём</span>
-      <h2><span class="v19only">Девятнадцать</span><span class="v15only">Пятнадцать</span> дней по порядку</h2>
+      <h2>Девятнадцать дней по порядку</h2>
       <p class="lede">Подробно: что смотрим, куда идём и чем это интересно.
         Дни 6, 7, 17 и 18 есть только в полном варианте. Отели названы ориентировочно: бронировать
         их будем за год, и к тому моменту что-то может оказаться занято или подорожать. Уровень
         и расположение останутся теми же, названия могут поменяться.</p>
-    </div><p class="vhint">Показан короткий вариант. Нумерация осталась как в полном, поэтому дни 6, 7, 17 и 18 просто отсутствуют: это Напиер с Хокс-Бей и финальный Гленорчи.</p>
+    </div>
     <div class="route">
 
       <div class="stop">
@@ -748,7 +715,7 @@ body[data-variant="15"] .vhint{display:block}
         </div>
       </div>
 
-      <div class="stop v19only">
+      <div class="stop">
         <div class="day"><div class="d">04.01<br>вт</div><div class="n">06</div></div>
         <div class="body">
           <h3>Напиер <span class="only18">только в полном</span></h3>
@@ -763,7 +730,7 @@ body[data-variant="15"] .vhint{display:block}
         </div>
       </div>
 
-      <div class="stop peak v19only">
+      <div class="stop peak">
         <div class="day"><div class="d">05.01<br>ср</div><div class="n">07</div></div>
         <div class="body">
           <h3>Хокс-Бей: вино, которое не пино <span class="only18">только в полном</span></h3>
@@ -923,7 +890,7 @@ body[data-variant="15"] .vhint{display:block}
         </div>
       </div>
 
-      <div class="stop v19only">
+      <div class="stop">
         <div class="day"><div class="d">15–16.01<br>сб–вс</div><div class="n">17–18</div></div>
         <div class="body">
           <h3>Гленорчи и последний рывок <span class="only18">только в полном</span></h3>
@@ -956,7 +923,7 @@ body[data-variant="15"] .vhint{display:block}
   </div>
 </section>
 
-<figure class="plate">
+<figure class="plate" id="wine">
   <img src="img/m2-tasting.jpg" alt="Дегустация на винодельне" style="object-position:center 48%">
   <figcaption><div class="wrap">
     <div class="cap-k">Три дня, три школы</div>
@@ -965,7 +932,7 @@ body[data-variant="15"] .vhint{display:block}
   </div></figcaption>
 </figure>
 
-<section>
+<section id="extra">
   <div class="wrap">
     <div class="shead">
       <span class="eyebrow">Винная часть</span>
@@ -1085,12 +1052,12 @@ body[data-variant="15"] .vhint{display:block}
       <div class="rows">
         <div class="rowi"><div class="t"><b>Окленд</b>, 3 ночи<small>Hotel Britomart 5★, дизайнерский, прямо на набережной Бритомарт</small></div><div class="v">320 €</div></div>
         <div class="rowi"><div class="t"><b>Роторуа</b>, 2 ночи<small>Regent of Rotorua, бутик в духе шестидесятых, бассейн</small></div><div class="v">185 €</div></div>
-        <div class="rowi v19only"><div class="t"><b>Напиер</b>, 2 ночи <span class="only18">только в полном</span><small>Masonic Hotel, ар-деко прямо на Марин-Парейд, живёшь внутри достопримечательности</small></div><div class="v">180 €</div></div>
+        <div class="rowi"><div class="t"><b>Напиер</b>, 2 ночи <span class="only18">только в полном</span><small>Masonic Hotel, ар-деко прямо на Марин-Парейд, живёшь внутри достопримечательности</small></div><div class="v">180 €</div></div>
         <div class="rowi"><div class="t"><b>Таупо</b>, 1 ночь<small>Millennium Hotel Taupo, вид на озеро</small></div><div class="v">240 €</div></div>
         <div class="rowi"><div class="t"><b>Ванака</b>, 3 ночи<small>Edgewater, прямо на берегу озера, это блок отдыха</small></div><div class="v">250 €</div></div>
         <div class="rowi"><div class="t"><b>Маунт-Кук</b>, 1 ночь<small>The Hermitage, вид на Аораки из окна, в деревне всего три отеля</small></div><div class="v">250 €</div></div>
         <div class="rowi"><div class="t"><b>Текапо</b>, 1 ночь<small>Peppers Bluewater, вид на озеро, пять минут до обсерватории</small></div><div class="v">250 €</div></div>
-        <div class="rowi"><div class="t"><b>Квинстаун</b>, 4 ночи в полном, 3 в коротком<small>Hotel St Moritz, номера с видом на Вакатипу, в центре</small></div><div class="v">330 €</div></div><div class="rowi v19only"><div class="t"><b>Даутфул-Саунд</b>, 1 ночь <span class="only18">только в полном</span><small>Каюта на борту Fiordland Navigator, входит в цену круиза</small></div><div class="v">в цене</div></div>
+        <div class="rowi"><div class="t"><b>Квинстаун</b>, 4 ночи в полном, 3 в коротком<small>Hotel St Moritz, номера с видом на Вакатипу, в центре</small></div><div class="v">330 €</div></div><div class="rowi"><div class="t"><b>Даутфул-Саунд</b>, 1 ночь <span class="only18">только в полном</span><small>Каюта на борту Fiordland Navigator, входит в цену круиза</small></div><div class="v">в цене</div></div>
       </div>
       <div class="stackpix">
         <img src="img/m2-hotel.jpg" alt="Лодж с видом на горы">
@@ -1207,31 +1174,7 @@ body[data-variant="15"] .vhint{display:block}
     <p class="note">Тарифов на январь 2028 пока нет нигде, всё посчитано по ценам 2026 года и будет уточнено ближе к делу.</p>
   </div>
 
-<div class="calc" id="calc">
-  <span class="eyebrow">Посчитать на себя</span>
-  <h3>Сколько это выйдет лично тебе</h3>
-  <div class="calcctl">
-    <div class="ctl"><span>Нас будет</span>
-      <div class="seg" data-name="group">
-        <button type="button" data-v="6">6</button><button type="button" data-v="8">8</button>
-        <button type="button" data-v="10">10</button><button type="button" data-v="12">12</button>
-      </div></div>
-    <div class="ctl"><span>Отели</span>
-      <div class="seg" data-name="hotel">
-        <button type="button" data-v="base">4–5★</button><button type="button" data-v="eco">эконом</button>
-      </div></div>
-    <div class="ctl"><span>Вариант</span>
-      <div class="seg" data-name="variant">
-        <button type="button" data-v="15">15 дней</button><button type="button" data-v="19">19 дней</button>
-      </div></div>
-  </div>
-  <div class="calcout">
-    <div class="co"><b data-out="tour">—</b><span>цена тура: жильё с завтраками, машины с топливом и страховкой, все билеты по программе, гиды<em data-out="tourrub"></em></span></div>
-    <div class="co"><b data-out="extra">—</b><span>сверх тура, каждый платит сам: оба перелёта, виза, страховка, симка, еда и дегустации<em data-out="extrarub"></em></span></div>
-    <div class="co total"><b data-out="total">—</b><span>итого со всем, примерно<em data-out="totaleur"></em></span></div>
-  </div>
-  <p class="note">Считаю по ценам 2026 года и курсу 95 ₽ за евро. Тарифов на январь 2028 ещё нет нигде, осенью 2027 пересчитаем.</p>
-</div>
+
 
 </section>
 
@@ -1285,7 +1228,7 @@ body[data-variant="15"] .vhint{display:block}
         <tbody>
           <tr><td class="od">3</td><td>Дегустация сверх программы на Уаихеке</td><td>25 €</td></tr>
           <tr><td class="od">4</td><td>Хоббитон: вечерний банкет вместо обычного тура</td><td>65 €</td></tr>
-          <tr class="only18row v19only"><td class="od">7</td><td>Дегустация сверх программы в Хокс-Бей <span class="only18">только в полном</span></td><td>25 €</td></tr>
+          <tr class="only18row"><td class="od">7</td><td>Дегустация сверх программы в Хокс-Бей <span class="only18">только в полном</span></td><td>25 €</td></tr>
           <tr><td class="od">11–12</td><td>Подъём на Рой-Пик в Ванаке, шесть часов</td><td>бесплатно</td></tr>
           <tr><td class="od">13</td><td>Вертолёт с посадкой на леднике Тасмана, 25 минут</td><td>195 €</td></tr>
           <tr><td class="od">13</td><td>Ski plane и вертолёт, комбо 45 минут</td><td>275 €</td></tr>
@@ -1294,7 +1237,7 @@ body[data-variant="15"] .vhint{display:block}
           <tr><td class="od">15, 17–18</td><td>Банджи Nevis, 134 м, из Квинстауна</td><td>200 €</td></tr>
           <tr><td class="od">15, 17–18</td><td>Прыжок с парашютом, 15 000 футов</td><td>215 €</td></tr>
           <tr><td class="od">15, 17–18</td><td>Параплан с горы Боба</td><td>140 €</td></tr>
-          <tr class="only18row v19only"><td class="od">18</td><td>Джетбот Шотовер <span class="only18">в полном уже в цене</span></td><td>90 €</td></tr>
+          <tr class="only18row"><td class="od">18</td><td>Джетбот Шотовер <span class="only18">в полном уже в цене</span></td><td>90 €</td></tr>
           <tr><td class="od">весь трип</td><td>Доплата за одноместное размещение</td><td>1 980 – 2 320 €</td></tr>
         </tbody>
       </table>
@@ -1461,81 +1404,9 @@ body[data-variant="15"] .vhint{display:block}
 <script id="ui-js">
 (function(){
   "use strict";
-  var body=document.body;
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- 1. вариант поездки ---------- */
-  var PRICE={
-    "15":{base:{6:5660,8:5150,10:4940,12:4650}, eco:{6:4800,8:4340,10:4150,12:3870}, extra:3477},
-    "19":{base:{6:7420,8:6810,10:6570,12:6210}, eco:{6:6450,8:5890,10:5670,12:5330}, extra:3862}
-  };
-  var RATE=95;
-  var state={variant:"19", group:"8", hotel:"eco"};
-
-  try{
-    var saved=localStorage.getItem("nz-variant");
-    if(saved==="15"||saved==="19") state.variant=saved;
-  }catch(e){}
-
-  function money(n,cur){
-    return n.toLocaleString("ru-RU").replace(/ /g," ")+" "+cur;
-  }
-  function upRub(n){ return Math.ceil(n/1000)*1000; }
-
-  function paintSegs(){
-    var segs=document.querySelectorAll('[data-name]');
-    for(var i=0;i<segs.length;i++){
-      var name=segs[i].getAttribute("data-name");
-      if(!(name in state)) continue;
-      var bs=segs[i].querySelectorAll("button[data-v]");
-      for(var j=0;j<bs.length;j++){
-        var on=bs[j].getAttribute("data-v")===state[name];
-        bs[j].classList.toggle("on",on);
-        bs[j].setAttribute("aria-pressed",on?"true":"false");
-      }
-    }
-  }
-
-  function applyVariant(){
-    body.setAttribute("data-variant",state.variant);
-    var pw=document.querySelectorAll("[data-variant].pricewrap");
-    for(var i=0;i<pw.length;i++)
-      pw[i].style.display = pw[i].getAttribute("data-variant")===state.variant ? "" : "none";
-    var fm=document.querySelectorAll(".fmt[data-variant]");
-    for(var k=0;k<fm.length;k++)
-      fm[k].classList.toggle("pick", fm[k].getAttribute("data-variant")===state.variant);
-    try{ localStorage.setItem("nz-variant",state.variant); }catch(e){}
-  }
-
-  /* ---------- 2. калькулятор ---------- */
-  function calc(){
-    var v=state.variant, g=parseInt(state.group,10), h=state.hotel;
-    var tour=PRICE[v][h][g], extra=PRICE[v].extra, total=tour+extra;
-    var out={
-      tour: money(tour,"€"),
-      tourrub:"≈ "+money(upRub(tour*RATE),"₽"),
-      extra: money(extra,"€"),
-      extrarub:"≈ "+money(upRub(extra*RATE),"₽"),
-      total: money(upRub(total*RATE),"₽"),
-      totaleur: money(total,"€")+" на человека"
-    };
-    for(var key in out){
-      var el=document.querySelector('[data-out="'+key+'"]');
-      if(el) el.textContent=out[key];
-    }
-  }
-
-  document.addEventListener("click",function(ev){
-    var btn=ev.target.closest ? ev.target.closest("button[data-v]") : null;
-    if(!btn) return;
-    var wrap=btn.parentNode, name=wrap.getAttribute("data-name");
-    if(!name||!(name in state)) return;
-    state[name]=btn.getAttribute("data-v");
-    paintSegs(); if(name==="variant") applyVariant(); calc();
-  });
-
-  paintSegs(); applyVariant(); calc();
-
-  /* ---------- 3. липкая полоса, прогресс, подсветка раздела ---------- */
+  /* ---------- липкая полоса, прогресс, подсветка раздела ---------- */
   var bar=document.getElementById("topbar"),
       prog=bar?bar.querySelector(".tbprog i"):null,
       hero=document.querySelector(".hero"),
@@ -1545,50 +1416,76 @@ body[data-variant="15"] .vhint{display:block}
     var t=document.querySelector(links[i].getAttribute("href"));
     if(t) secs.push({a:links[i],el:t});
   }
+
+  /* ---------- карта: линия идёт следом за прокруткой ---------- */
+  var map=document.querySelector(".nzmap"), solid=[], dashed=[], pins=[];
+  if(map){
+    map.classList.add("live");
+    var pick=function(sel){var e=map.querySelector(sel);return e;};
+    [[".rd-n",0,0.34],[".rd-s",0.50,0.92]].forEach(function(x){
+      var el=pick(x[0]); if(!el) return;
+      var L=0; try{ L=Math.ceil(el.getTotalLength()); }catch(e){}
+      if(!L) return;
+      el.style.strokeDasharray=L+" "+L;
+      el.style.strokeDashoffset=L;
+      solid.push({el:el,len:L,from:x[1],to:x[2]});
+    });
+    [[".ferry",0.28,0.40],[".fly",0.36,0.56],[".boat",0.86,1.0]].forEach(function(x){
+      var el=pick(x[0]); if(el) dashed.push({el:el,from:x[1],to:x[2]});
+    });
+    var gs=map.querySelectorAll("g"), k=0;
+    for(var m=0;m<gs.length;m++){
+      if(!gs[m].querySelector("circle.pt")) continue;
+      gs[m].setAttribute("data-pin",k); pins.push(gs[m]); k++;
+    }
+  }
+  function clamp(v){ return v<0?0:(v>1?1:v); }
+  function seg(p,a,b){ return clamp((p-a)/(b-a)); }
+
+  function drawMap(){
+    if(!map||reduce) return;
+    var r=map.getBoundingClientRect(), vh=window.innerHeight||800;
+    var span=Math.max(240, r.height*0.72);
+    var p=clamp((vh*0.82 - r.top)/span);
+    for(var i=0;i<solid.length;i++){
+      var o=solid[i];
+      o.el.style.strokeDashoffset = (o.len*(1-seg(p,o.from,o.to))).toFixed(1);
+    }
+    for(var j=0;j<dashed.length;j++){
+      var d=dashed[j];
+      d.el.style.opacity = seg(p,d.from,d.to).toFixed(3);
+    }
+    var step=0.80/Math.max(1,pins.length);
+    for(var n=0;n<pins.length;n++){
+      var t=seg(p, 0.04+n*step, 0.04+n*step+step*0.9);
+      pins[n].style.opacity=t.toFixed(3);
+      pins[n].style.transform="translateY("+((1-t)*-8).toFixed(2)+"px)";
+    }
+  }
+  if(map&&reduce){
+    map.classList.remove("live");
+    for(var q=0;q<solid.length;q++) solid[q].el.style.strokeDashoffset=0;
+  }
+
   var ticking=false;
   function onScroll(){
     if(ticking) return; ticking=true;
     requestAnimationFrame(function(){
       ticking=false;
       var y=window.pageYOffset||document.documentElement.scrollTop;
-      if(bar) bar.classList.toggle("show", y > (hero?hero.offsetHeight*0.6:300));
+      if(bar) bar.classList.toggle("over", y < (hero?hero.offsetHeight*0.42:300));
       var h=document.documentElement.scrollHeight-window.innerHeight;
       if(prog) prog.style.width=(h>0?Math.min(100,y/h*100):0)+"%";
       var cur=null, mid=y+window.innerHeight*0.33;
       for(var j=0;j<secs.length;j++) if(secs[j].el.offsetTop<=mid) cur=secs[j];
-      for(var k=0;k<secs.length;k++) secs[k].a.classList.toggle("here", secs[k]===cur);
+      for(var k2=0;k2<secs.length;k2++) secs[k2].a.classList.toggle("here", secs[k2]===cur);
+      drawMap();
     });
   }
   window.addEventListener("scroll",onScroll,{passive:true});
   window.addEventListener("resize",onScroll);
+  window.addEventListener("load",onScroll);
   onScroll();
-
-  /* ---------- 4. карта рисуется, когда доходишь до неё ---------- */
-  var map=document.querySelector(".nzmap");
-  if(map){
-    var lines=map.querySelectorAll(".rd, .fly, .ferry, .boat");
-    for(var l=0;l<lines.length;l++){
-      try{
-        var len=Math.ceil(lines[l].getTotalLength());
-        lines[l].style.strokeDasharray=len+" "+len;
-        lines[l].style.setProperty("--len",len);
-      }catch(e){}
-    }
-    var gs=map.querySelectorAll("g"), pin=0;
-    for(var m=0;m<gs.length;m++){
-      if(!gs[m].querySelector("circle.pt")) continue;
-      gs[m].setAttribute("data-pin",pin);
-      gs[m].style.animationDelay=(0.45+pin*0.17).toFixed(2)+"s";
-      pin++;
-    }
-    var fire=function(){ map.classList.add("draw"); };
-    if("IntersectionObserver" in window){
-      var io=new IntersectionObserver(function(en){
-        for(var n=0;n<en.length;n++) if(en[n].isIntersecting){ fire(); io.disconnect(); }
-      },{threshold:0.25});
-      io.observe(map);
-    } else fire();
-  }
 })();
 </script>
 </body></html>
