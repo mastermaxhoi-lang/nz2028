@@ -1,0 +1,1323 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Новая Зеландия, январь 2028: маршрут по дням, цены и как попасть в поездку.">
+<meta property="og:title" content="Новая Зеландия · январь 2028">
+<meta property="og:description" content="Два острова, 2 100 км за рулём, фьорд, вино трёх регионов. 15 или 19 дней, группа 6-12 человек.">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo.png">
+<title>Новая Зеландия, январь 2028</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F2F5F0; --surface:#FFFFFF; --surface-2:#E4EAE2;
+  --ink:#121F1B; --ink-2:#44554C; --ink-3:#78887E; --line:#CBD5C9;
+  --gold:#A3690D; --gold-bright:#C9881A; --glacier:#136F66; --ember:#B4441E;
+  --plate:#09130F; --mapland:#DCE4DA; --mapedge:#B4C2B2; --pinnum:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0C1A17; --surface:#132823; --surface-2:#081310;
+    --ink:#EAF1EA; --ink-2:#AEBEB3; --ink-3:#7A8C81; --line:#254039;
+    --gold:#E0A83F; --gold-bright:#F2C468; --glacier:#79C7BD; --ember:#E8794E;
+    --plate:#050B09; --mapland:#1E3A33; --mapedge:#2F5349; --pinnum:#1A0B06;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0C1A17; --surface:#132823; --surface-2:#081310;
+  --ink:#EAF1EA; --ink-2:#AEBEB3; --ink-3:#7A8C81; --line:#254039;
+  --gold:#E0A83F; --gold-bright:#F2C468; --glacier:#79C7BD; --ember:#E8794E;
+  --plate:#050B09; --mapland:#1E3A33; --mapedge:#2F5349; --pinnum:#1A0B06;
+}
+
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);
+  font-family:"Spectral",Georgia,"Times New Roman",serif;font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.hero>img:not(.herologo),.plate img,.stop .shot img,.stop .duo img,.card img,.mosaic img,.split img,.why .whypic{
+  filter:saturate(1.08) contrast(1.05) brightness(1.02)}
+.hero>img:not(.herologo){filter:saturate(1.14) contrast(1.05) brightness(1.1)}
+img[src$="mx-glowworm.jpg"]{filter:saturate(1.1) contrast(1.06) brightness(.95)}
+.wrap{max-width:1060px;margin:0 auto;padding-inline:20px;padding-block:0}
+.lede{max-width:none}
+.wide{max-width:1180px;margin:0 auto;padding-inline:20px}
+
+h1,h2,h3,h4,.eyebrow,.tag,.n,.fig,caption,thead th,.s,.cap-k,.cap-t,.big{font-family:"Oswald",Impact,"Arial Narrow",sans-serif}
+h1{font-weight:700;font-size:clamp(3rem,12vw,6.4rem);line-height:.9;letter-spacing:.004em;word-spacing:.14em;text-transform:uppercase;text-wrap:balance;margin:0}
+h2{font-weight:600;font-size:clamp(1.7rem,5vw,2.6rem);line-height:1.08;letter-spacing:.012em;word-spacing:.16em;text-transform:uppercase;text-wrap:balance;margin:0}
+h3{font-weight:500;font-size:1.2rem;line-height:1.24;text-transform:uppercase;letter-spacing:.025em;word-spacing:.14em;margin:0}
+h4{font-weight:500;font-size:.95rem;text-transform:uppercase;letter-spacing:.1em;margin:0;color:var(--gold)}
+p{margin:0;max-width:none}
+.eyebrow{font-weight:600;font-size:.74rem;text-transform:uppercase;letter-spacing:.24em;color:var(--gold)}
+.herologo{position:absolute;left:clamp(16px,4vw,44px);top:clamp(16px,3.5vw,34px);z-index:2;
+  width:clamp(140px,19vw,260px);height:auto;object-fit:contain;
+  filter:drop-shadow(0 0 7px rgba(255,255,255,.9)) drop-shadow(0 0 22px rgba(255,255,255,.6))}
+.logo-foot{width:clamp(110px,14vw,164px);height:auto;object-fit:contain;opacity:.9}
+.footgrid{display:flex;flex-wrap:wrap;align-items:center;gap:22px 28px;justify-content:space-between}
+.foottext{display:grid;gap:5px;min-width:200px}
+.foottext .footbrand{font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;
+  font-size:.86rem;color:var(--ink-2)}
+.qr{display:grid;justify-items:center;gap:7px;text-decoration:none;border:0}
+.qr img{width:clamp(104px,13vw,132px);height:auto;background:#fff;padding:7px;border:1px solid var(--line)}
+.qr span{font-size:.74rem;line-height:1.35;color:var(--ink-3);text-align:center}
+footer a{border-bottom:0}
+.footbrand{display:inline-flex;align-items:center;flex-wrap:wrap;gap:0 2px}
+.brand{font-family:"Oswald",sans-serif;font-weight:600;font-size:clamp(1rem,2.4vw,1.4rem);
+  text-transform:uppercase;letter-spacing:.2em;word-spacing:.1em;color:var(--gold-bright);
+  text-shadow:0 1px 14px rgba(0,0,0,.9)}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-variant-numeric:tabular-nums}
+.lede{font-size:clamp(1.08rem,2.5vw,1.3rem);line-height:1.55;color:var(--ink-2)}
+em{font-style:italic}
+
+/* ===== HERO ===== */
+.hero{position:relative;background:var(--plate);overflow:hidden;isolation:isolate}
+.hero>img:not(.herologo){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(257deg,rgba(4,10,8,.90) 0%,rgba(4,10,8,.80) 34%,rgba(4,10,8,.40) 64%,rgba(4,10,8,.12) 100%),
+  linear-gradient(180deg,rgba(4,10,8,.38) 0%,rgba(4,10,8,.06) 26%,rgba(4,10,8,.30) 72%,rgba(4,10,8,.70) 100%)}
+.hero .wrap{position:relative;padding-block:clamp(78px,17vw,160px) clamp(32px,5vw,54px);color:#F4F8F2;text-align:right}
+.hero h1,.hero .lede{margin-left:auto}
+.hero-meta{justify-content:flex-end}
+.statline div{text-align:right;padding:16px 0 16px 26px;border-right:0;border-left:1px solid rgba(244,248,242,.3)}
+.statline div:first-child{border-left:0}
+.hero h1{color:#FFF;text-shadow:0 2px 26px rgba(0,0,0,.75),0 1px 3px rgba(0,0,0,.6)}
+.hero h1 .thin{display:block;font-weight:300;color:var(--gold-bright);font-size:.4em;letter-spacing:.06em;margin-top:.3em;line-height:1.1;text-shadow:0 1px 16px rgba(0,0,0,.9)}
+.hero .lede{color:#E4EDE3;max-width:52ch;margin-left:auto;text-align:left;text-shadow:0 1px 14px rgba(0,0,0,.85)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;margin-bottom:22px}
+.hero-meta .eyebrow{color:var(--gold-bright)}
+.hero-meta .coord{font-size:.74rem;letter-spacing:.08em;color:#B9C8BC;text-shadow:0 1px 10px rgba(0,0,0,.85)}
+.hero-sub{margin-top:26px;display:grid;gap:15px}
+.joinstrip{background:var(--plate);padding-block:clamp(20px,3vw,30px);border:0}
+.joinstrip .wrap{display:flex;align-items:center;gap:clamp(16px,3vw,30px);flex-wrap:wrap}
+.joinqr{width:110px;height:110px;flex:0 0 auto;background:#fff;padding:7px}
+.jointext{flex:1 1 320px;display:grid;gap:6px}
+.joinstrip h2{font-size:clamp(1.15rem,2.6vw,1.6rem);color:#FFF;margin:0}
+.joinstrip p{font-size:.92rem;color:#B9C8BC;max-width:62ch}
+.joinstrip .eyebrow{color:var(--gold-bright)}
+.joinstrip .tglink{flex:0 0 auto}
+@media(max-width:620px){.joinqr{display:none}.joinstrip .tglink{width:100%;text-align:center}}
+.statline{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid rgba(244,248,242,.3);margin-top:32px}
+.statline div{flex:1 1 170px;padding:16px 26px 16px 0;border-right:1px solid rgba(244,248,242,.3)}
+.statline div:last-child{border-right:0}
+.statline b{display:block;font-family:"Oswald",sans-serif;font-weight:600;font-size:1.6rem;line-height:1.1;color:var(--gold-bright);text-shadow:0 1px 12px rgba(0,0,0,.8)}
+.statline span{display:block;margin-top:5px;font-size:.66rem;line-height:1.4;text-transform:uppercase;letter-spacing:.12em;color:#B9C8BC;text-shadow:0 1px 10px rgba(0,0,0,.85)}
+
+/* ===== SECTIONS ===== */
+section{padding-block:clamp(46px,7vw,80px)}
+section.alt{background:var(--surface);border-block:1px solid var(--line)}
+section.dark{background:var(--plate);color:#EAF1EA;border:0}
+section.dark h2,section.dark h3{color:#FFF}
+section.dark p,section.dark li{color:#B9C8BC}
+section.dark .eyebrow{color:var(--gold-bright)}
+.shead{display:grid;gap:12px;margin-bottom:32px}
+
+/* ===== PLATES ===== */
+.plate{position:relative;background:var(--plate);isolation:isolate;margin:0}
+.plate img{width:100%;height:clamp(300px,54vw,600px);object-fit:cover;object-position:center 48%}
+.plate figcaption{position:absolute;left:0;right:0;bottom:0;padding:110px 0 32px;
+  background:linear-gradient(180deg,rgba(5,11,9,0) 0%,rgba(5,11,9,.42) 38%,rgba(5,11,9,.93) 100%);color:#EFF4EE}
+.plate .cap-k{font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;color:var(--gold-bright);text-shadow:0 1px 10px rgba(0,0,0,.9)}
+.plate .cap-t{font-weight:600;text-transform:uppercase;font-size:clamp(1.5rem,5vw,2.6rem);line-height:1.04;letter-spacing:.015em;word-spacing:.16em;margin-top:7px;color:#FFF;text-shadow:0 2px 16px rgba(0,0,0,.75)}
+.plate .cap-s{font-size:.95rem;color:#D3DDD4;margin-top:9px;max-width:52ch;text-shadow:0 1px 12px rgba(0,0,0,.85)}
+.plate.capright figcaption .wrap{text-align:right}
+.plate.capright .cap-s{margin-left:auto}
+.plate.capright::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(315deg,rgba(5,11,9,.66) 0%,rgba(5,11,9,.46) 22%,rgba(5,11,9,.24) 46%,rgba(5,11,9,.08) 68%,rgba(5,11,9,0) 88%)}
+.plate figcaption{z-index:1}
+
+/* ===== WHY ===== */
+.why{display:grid;gap:0;padding:0;margin:0}
+.why li{list-style:none;display:grid;grid-template-columns:6.4rem 1fr;gap:0 20px;
+  padding-block:22px;border-top:1px solid var(--line);align-items:start}
+.why li:last-child{border-bottom:1px solid var(--line)}
+.why li{grid-template-columns:6.4rem 1fr 190px;column-gap:24px}
+.why .whypic{width:190px;aspect-ratio:3/2;object-fit:cover;align-self:start;border:1px solid var(--line)}
+@media(max-width:760px){
+  .why li{grid-template-columns:6.4rem 1fr}
+  .why .whypic{grid-column:2;width:min(100%,240px);margin-top:14px}
+}
+.why .fig{font-weight:600;font-size:1.7rem;line-height:1;color:var(--gold);padding-top:2px}
+.why .fig small{display:block;font-size:.58rem;letter-spacing:.06em;line-height:1.35;color:var(--ink-3);margin-top:5px;font-family:"JetBrains Mono",monospace;font-weight:400}
+.why h3{margin-bottom:7px}
+.why p{color:var(--ink-2);font-size:.98rem}
+
+/* ===== ROUTE ===== */
+.route{display:grid;gap:0}
+.stop{display:grid;grid-template-columns:5.6rem 1fr;gap:0 20px;
+  padding-block:26px;border-top:1px solid var(--line)}
+.stop:last-child{border-bottom:1px solid var(--line)}
+.stop .day .d{font-family:"JetBrains Mono",monospace;font-size:.63rem;line-height:1.5;
+  color:var(--ink-3);font-variant-numeric:tabular-nums}
+.stop .day .n{font-family:"Oswald",sans-serif;font-weight:700;font-size:2.1rem;line-height:.95;color:var(--ink);margin-top:6px}
+.stop .body h3{margin-bottom:9px}
+.stop .body p{color:var(--ink-2);font-size:.98rem}
+.stop .drive{margin-top:12px;font-size:.84rem;color:var(--ink-3);letter-spacing:.01em}
+.stop .drive b{color:var(--glacier);font-weight:600}
+.stop .stay{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:.88rem;color:var(--ink-3)}
+.stop .stay b{color:var(--ink-2);font-weight:600}
+.stop .shot{margin-top:16px;overflow:hidden;background:var(--surface-2)}
+.stop .shot img{width:100%;height:clamp(215px,45vw,461px);object-fit:cover;object-position:center 46%}
+.stop .duo{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stop .duo img{width:100%;height:clamp(155px,31vw,304px);object-fit:cover;object-position:center 46%}
+.datastrip{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;
+  font-size:.72rem;letter-spacing:.04em;color:var(--ink-3)}
+.datastrip span{white-space:nowrap}
+.datastrip span b{color:var(--glacier);font-weight:500}
+.only18{display:inline-block;margin-left:8px;padding:3px 9px;background:var(--ember);border:1px solid var(--ember);color:var(--pinnum);font-family:"Oswald",sans-serif;font-weight:600;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;vertical-align:middle}
+.stop.peak .n{color:var(--gold-bright)}
+.stop.peak h3{color:var(--gold)}
+
+
+/* ===== КАРТА ===== */
+.mapgrid{display:grid;gap:26px;grid-template-columns:1fr;align-items:stretch}
+@media(min-width:960px){.mapgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px}}
+.mapbox{border:1px solid var(--line);background:var(--ground);padding:16px 14px 12px}
+.maplede{font-size:.95rem;line-height:1.55;color:var(--ink-2);margin:0 0 14px}
+.nzmap{width:100%;display:block;height:auto}
+.nzmap .land{fill:var(--mapland);stroke:var(--mapedge);stroke-width:3}
+.nzmap .rd{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:11}
+.nzmap .rd-n{stroke:var(--gold)}
+.nzmap .rd-s{stroke:var(--glacier)}
+.nzmap .fly{fill:none;stroke:var(--ink-3);stroke-width:6;stroke-dasharray:30 24}
+.nzmap .ferry,.nzmap .boat{fill:none;stroke:var(--ink-3);stroke-width:7;stroke-dasharray:16 14}
+.nzmap .pt{fill:var(--ink);stroke:var(--ground);stroke-width:6}
+.nzmap .pt-extra{fill:var(--ember)}
+.nzmap .num{fill:var(--ground);font-family:"Oswald",sans-serif;font-weight:600;font-size:26px}
+.nzmap .num.only{fill:var(--pinnum)}
+.nzmap .num.wide{font-size:20px}
+.nzmap .isl{fill:var(--ink-3);font-family:"Oswald",sans-serif;font-weight:500;font-size:52px;
+  text-transform:uppercase;letter-spacing:3px;opacity:.55}
+.mapnote{font-size:.78rem;color:var(--ink-3);text-align:left;margin:0;max-width:none}
+.flylegend{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);display:grid;gap:9px}
+.flylegend p{font-size:.78rem;line-height:1.5;color:var(--ink-3)}
+.flylegend b{color:var(--ink-2);font-weight:600}
+.mapfoot{display:grid;grid-template-columns:1fr auto;gap:14px 20px;align-items:start;margin-top:12px}
+@media(max-width:700px){.mapfoot{grid-template-columns:1fr}}
+.maplegend{display:flex;flex-direction:column;flex-wrap:nowrap;gap:7px;justify-content:flex-start;margin-top:0;
+  font-size:.76rem;color:var(--ink-3)}
+.maplegend span{display:flex;align-items:center;gap:7px}
+.maplegend i{width:24px;height:3px;display:block;border-radius:2px}
+.maplegend .k-n{background:var(--gold)}
+.maplegend .k-x{background:var(--ember);height:9px;width:9px;border-radius:50%}
+.maplegend .k-s{background:var(--glacier)}
+.maplegend .k-f{background:repeating-linear-gradient(90deg,var(--ink-3) 0 8px,transparent 8px 13px)}
+.maplegend .k-b{background:repeating-linear-gradient(90deg,var(--ink-3) 0 5px,transparent 5px 9px)}
+table.dayt{min-width:0;width:100%}
+.dayt th{font-size:.64rem;padding:5px 6px}
+.dayt th:nth-child(2),.dayt td:nth-child(2){text-align:left}
+.dayt td{padding:4px 6px;font-size:.82rem;line-height:1.35;vertical-align:top}
+.dayt .dnum{font-family:"Oswald",sans-serif;font-weight:600;color:var(--gold);width:4.1rem;text-align:left;font-size:.86rem;white-space:nowrap}
+.dayt .ddate{display:inline-block;margin-left:5px;font-family:"JetBrains Mono",monospace;font-weight:400;font-size:.62rem;letter-spacing:.01em;color:var(--ink-3)}
+.dayt .dtxt{font-family:"Spectral",serif;color:var(--ink);text-align:left}
+.dayt .dnote{font-size:.76rem;color:var(--ink-3)}
+.dayt .dnote::before{content:"· "}
+.dayt .dkm{font-family:"JetBrains Mono",monospace;color:var(--ink-2);white-space:nowrap;font-size:.72rem}
+.dayt .only18row td{color:var(--ember)}
+table.opt .od{font-family:"Oswald",sans-serif;font-weight:600;color:var(--gold);width:6rem;text-align:left}
+table.opt tr.only18row td{color:var(--ember)}
+table.opt tr.only18row .od{color:var(--ember)}
+table.opt th:nth-child(2),table.opt td:nth-child(2){text-align:left}
+.dayt .only18row .dnum{color:var(--ember)}
+.dayt .only18row .dtxt{color:var(--ember)}
+.daytable{border:1px solid var(--line);background:var(--ground);padding:12px 12px 8px}
+.dayt .flyrow td{background:var(--surface-2)}
+.dayt .flyrow .dnum{color:var(--glacier);font-size:1.05rem}
+.dayt .flyrow .dtxt{color:var(--ink-2)}
+
+/* ===== CARDS ===== */
+.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.cards.four{grid-template-columns:repeat(2,1fr)}
+@media(max-width:560px){.cards.four{grid-template-columns:1fr}}
+.cards.four .card img{height:230px}
+.card{background:var(--surface);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+section.dark .card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.14)}
+.card img{width:100%;height:243px;object-fit:cover;object-position:center 46%}
+.card .pad{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .pad p{flex:1}
+.card .price{margin-top:4px}
+.card h3{font-size:1.05rem}
+.card p{font-size:.9rem;color:var(--ink-2)}
+section.dark .card p{color:#B9C8BC}
+.card .price{font-family:"Oswald",sans-serif;font-weight:600;font-size:1.3rem;color:var(--gold)}
+.card .price small{font-family:"Spectral",Georgia,serif;font-weight:400;font-size:.8rem;color:var(--ink-3);white-space:nowrap}
+.card .meta{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+
+/* ===== LIST WITH PHOTO ===== */
+.split{display:grid;gap:26px;grid-template-columns:1fr;align-items:start}
+@media(min-width:760px){.split{grid-template-columns:1.05fr .95fr;gap:34px}}
+.split img{width:100%;height:clamp(280px,40vw,540px);object-fit:cover;object-position:center 48%}
+.stackpix{display:grid;gap:8px}
+.stackpix img{height:clamp(190px,25vw,310px)}
+.rows{display:grid;gap:0}
+.rowi{display:grid;grid-template-columns:1fr auto;gap:12px;padding-block:13px;border-top:1px solid var(--line);align-items:baseline}
+.rowi:last-child{border-bottom:1px solid var(--line)}
+section.dark .rowi{border-color:rgba(255,255,255,.14)}
+.rowi .t{font-size:.95rem}
+.rowi .t small{display:block;font-size:.78rem;color:var(--ink-3);margin-top:3px;font-family:"Spectral",serif}
+section.dark .rowi .t small{color:#8C9E92}
+.rowi .v{font-family:"JetBrains Mono",monospace;font-size:.9rem;color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* ===== MOSAIC ===== */
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.mosaic img{width:100%;height:clamp(120px,16vw,200px);object-fit:cover;object-position:center 46%}
+.mosaic .tall{grid-row:span 2;height:100%}
+@media(max-width:620px){.mosaic{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== VARIANTS ===== */
+.formats{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(275px,1fr))}
+.fmt{border:1px solid var(--line);padding:28px 24px;background:var(--ground)}
+.fmt.pick{border:2px solid var(--gold);background:var(--surface)}
+.fmt .tag{font-weight:600;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.fmt h3{margin:10px 0 12px;font-size:1.35rem;word-spacing:.14em}
+.fmt p{font-size:.95rem;color:var(--ink-2)}
+.fmt ul{margin:16px 0 0;padding:0;display:grid;gap:9px}
+.fmt li{list-style:none;font-size:.9rem;color:var(--ink-2);padding-left:18px;position:relative}
+.fmt li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px;background:var(--gold)}
+
+/* ===== TABLES ===== */
+.pricewrap{overflow-x:auto;margin-top:10px}
+table{border-collapse:collapse;width:100%;min-width:460px}
+caption{text-align:left;font-weight:600;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);padding-bottom:12px}
+th,td{padding:12px 10px;text-align:right;border-bottom:1px solid var(--line);font-size:.95rem}
+th:first-child,td:first-child{text-align:left}
+thead th{font-weight:400;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;
+  color:var(--ink-3);border-bottom:1px solid var(--ink-3)}
+tbody td{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+tbody td:first-child{font-family:"Spectral",serif;color:var(--ink)}
+tbody tr.best td{color:var(--ink);background:var(--surface-2)}
+tbody tr.best td:first-child b{color:var(--gold)}
+section.dark tbody td{color:#B9C8BC}
+section.dark tbody td:first-child{color:#EAF1EA}
+section.dark tbody tr.best td{background:rgba(255,255,255,.07);color:#FFF}
+.note{margin-top:18px;font-size:.89rem;color:var(--ink-3);max-width:none}
+table.extras{min-width:0;margin-top:4px}
+table.extras td{padding:9px 4px;font-size:.92rem;border-bottom:1px solid var(--line)}
+table.extras td:first-child{text-align:left;font-family:"Spectral",serif;color:var(--ink-2)}
+table.extras td:last-child{font-family:"JetBrains Mono",monospace;color:var(--ink-2);white-space:nowrap}
+table.extras tr.sum td{border-bottom:0;border-top:1px solid var(--gold);color:var(--ink);padding-top:12px}
+table.extras tr.sum td:last-child{color:var(--gold)}
+.incl ul.plain{display:none}
+section.dark .note{color:#8C9E92}
+
+/* ===== INCLUDED ===== */
+.incl{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));margin-top:6px}
+.incl h3{margin-bottom:14px}
+.incl ul{margin:0;padding:0;display:grid;gap:9px}
+.incl li{list-style:none;font-size:.93rem;color:var(--ink-2);padding-left:20px;position:relative;line-height:1.45}
+.incl .yes li::before{content:"+";position:absolute;left:0;color:var(--glacier);font-family:"JetBrains Mono",monospace}
+.incl .no li::before{content:"\2013";position:absolute;left:2px;color:var(--ink-3);font-family:"JetBrains Mono",monospace}
+
+.warn{border-left:3px solid var(--gold);padding:4px 0 4px 20px;display:grid;gap:11px}
+.warn p{font-size:.97rem;color:var(--ink-2)}
+
+.steps{display:grid;gap:0;margin-top:26px;padding:0}
+.steps li{list-style:none;display:grid;grid-template-columns:2.4rem 1fr;gap:16px;
+  padding-block:17px;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .s{font-family:"Oswald",sans-serif;font-weight:600;color:var(--gold);font-size:1.15rem}
+.steps p{font-size:.97rem;color:var(--ink-2)}
+.joinbox{margin-top:30px;padding:22px 24px;border:1px solid var(--line);background:var(--surface);
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;justify-content:space-between}
+.joinbox .jt{max-width:46ch}
+.joinbox .jt b{font-family:"Oswald",Impact,sans-serif;font-weight:600;text-transform:uppercase;
+  letter-spacing:.06em;display:block;font-size:1.05rem;margin-bottom:4px}
+.joinbox .jt span{font-size:.92rem;color:var(--ink-2)}
+.tglink{font-family:"Oswald",Impact,sans-serif;font-weight:600;text-transform:uppercase;
+  letter-spacing:.09em;font-size:.86rem;text-decoration:none;white-space:nowrap;
+  color:var(--ground);background:var(--gold);padding:13px 24px;border:1px solid var(--gold);
+  transition:background .15s ease,color .15s ease}
+.tglink:hover,.tglink:focus-visible{background:var(--gold-bright);border-color:var(--gold-bright)}
+.tglink:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+footer a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+footer a:hover{border-bottom-color:var(--gold)}
+@media (max-width:560px){.joinbox{flex-direction:column;align-items:flex-start}
+  .tglink{width:100%;text-align:center}}
+.steps .when{display:block;font-family:"Oswald",sans-serif;font-weight:600;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+
+footer{padding-block:32px;border-top:1px solid var(--line);color:var(--ink-3);font-size:.8rem}
+footer .wrap{display:grid;gap:14px}
+footer .top{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between}
+.credits{font-size:.66rem;line-height:1.7;color:var(--ink-3);max-width:none}
+
+@media (max-width:520px){
+  .stop{grid-template-columns:4.4rem 1fr;gap:0 14px}
+  .stop .day .n{font-size:1.6rem}
+  .stop .day .d{font-size:.57rem}
+  .why li{grid-template-columns:5.2rem 1fr}
+  .card img{height:150px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <img class="herologo" src="img/logo.png" alt="Логотип «Поехали с друзьями»">
+  <img src="img/mx-road.jpg" alt="Дорога к Аораки вдоль озера Пукаки" style="object-position:38% 52%">
+  <div class="wrap">
+    <div class="hero-meta">
+      <span class="brand">Поехали с друзьями</span>
+      <span class="mono coord">45&deg;02&prime; S &middot; 168&deg;40&prime; E</span>
+    </div>
+    <h1>Новая<br>Зеландия<span class="thin">январь 2028</span></h1>
+    <div class="hero-sub">
+      <p class="lede">До Новой Зеландии из России сутки пути и одна пересадка. Туда не заглядывают
+        по дороге, туда летят специально, поэтому её нет в списках даже у тех путешественников,
+        кто объездил полмира.</p>
+      <p class="lede">Две полосы земли посреди Тихого океана, вытянутые на 1 600 километров, это почти
+        как от Москвы до Екатеринбурга или Сочи. Утром кипящий гейзер, днём океанский пляж, вечером ледник.
+        Людей мало, а за окном горы, бирюзовые озёра и зелёные долины.</p>
+      <p class="lede">Мы едем маленькой дружной группой и будем сами за рулём. Сами решаем, где
+        притормозить ради кадра или обеда. Но маршрут собран и выверен по дням: хака и ужин из земляной
+        печи у маори, декорации Шира, винодельни трёх регионов, ночь на корабле посреди фьорда
+        и три дня отдыха посередине.</p>
+      <p class="lede">Сверх программы каждый выбирает сам, если захочет: вертолёт с посадкой на леднике,
+        параплан над Квинстауном, джетбот в метре от скал.</p>
+      <p class="lede"><b>Два варианта: пятнадцать дней и девятнадцать.</b></p>
+    </div>
+    <div class="statline">
+      <div><b>2</b><span>острова за поездку</span></div>
+      <div><b>2 100</b><span>км дорог вдоль озёр и перевалов</span></div>
+      <div><b>3</b><span>винных региона</span></div>
+      <div><b>3</b><span>дня чистого отдыха</span></div>
+      <div><b>6&ndash;12</b><span>человек</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="joinstrip">
+  <div class="wrap">
+    <img class="joinqr" src="img/qr-chat.png" alt="QR-код на чат поездки в Телеграме">
+    <div class="jointext">
+      <span class="eyebrow">Чат поездки</span>
+      <h2>Заходите сразу, дальше всё решается там</h2>
+      <p>Даты, состав, цены и ответы на вопросы. Ни к чему не обязывает: можно зайти, посмотреть и выйти.</p>
+    </div>
+    <a class="tglink" href="https://t.me/+La_7w6y0A0BiMzYy" target="_blank" rel="noopener">Вступить в чат</a>
+  </div>
+</section>
+
+<figure class="plate capright">
+  <img src="img/fiord-navigator.jpg" alt="Судно под парусами в Даутфул-Саунде" style="object-position:center 62%">
+  <figcaption><div class="wrap">
+    <div class="cap-k">Фьордленд</div>
+    <div class="cap-t">Даутфул-Саунд</div>
+    <div class="cap-s">Отвесные стены на километр вверх прямо из воды. Попасть можно только катером через озеро и автобусом через перевал. Ночуем прямо на борту.</div>
+  </div></figcaption>
+</figure>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Зачем именно туда</span>
+      <h2>Ради чего лететь так далеко</h2>
+    </div>
+    <ul class="why">
+      <li>
+        <span class="fig">40<small>км вглубь гор</small></span>
+        <div>
+          <h3>Фьорд, куда не ведёт дорога</h3>
+          <p>Ледник выпилил в горах узкий морской залив: стены на километр прямо из воды, под килем сразу
+            чёрная глубина. Кук прошёл мимо в 1770 году и внутрь не зашёл, сомневался, что сумеет выйти
+            обратно под парусом. Отсюда и имя, Сомнительный. В длинном варианте ночуем прямо на корабле:
+            вечером капитан глушит двигатели и просит тишины.</p>
+        </div>
+        <img class="whypic" src="img/why-fiord.jpg" alt="Даутфул-Саунд с воздуха">
+      </li>
+      <li>
+        <span class="fig">4 300<small>км&sup2; без фонарей</small></span>
+        <div>
+          <h3>Небо, какого вы не видели</h3>
+          <p>Вокруг Текапо на тысячи квадратных километров запрещены фонари, светящие вверх. Млечный Путь здесь
+            отбрасывает на землю тень, а Магеллановы Облака, две соседние с нашей галактики, видно
+            простым глазом: из Европы их не увидеть никогда. Поднимаемся с астрономом в обсерваторию
+            на вершине горы. Скорее всего, это будет самое звёздное небо в вашей жизни.</p>
+        </div>
+        <img class="whypic" src="img/why-sky.jpg" alt="Млечный Путь над озером Текапо">
+      </li>
+      <li>
+        <span class="fig">44<small>норы в Шире</small></span>
+        <div>
+          <h3>Средиземье из «Властелина колец»</h3>
+          <p>Шир построили для Питера Джексона на действующей овечьей ферме и после съёмок не снесли:
+            сорок четыре норы, огороды и паб «Зелёный дракон». А 17 декабря 2027 года, за одиннадцать дней
+            до нашего вылета, выходит новый фильм по Толкину «Охота на Голлума»: снимали его здесь же,
+            и мы приедем в декорации, которые планета только что увидела заново.</p>
+        </div>
+        <img class="whypic" src="img/why-middle.jpg" alt="Норы хоббитов в Хоббитоне на закате">
+      </li>
+      <li>
+        <span class="fig">8<small>часов в яме</small></span>
+        <div>
+          <h3>Еда, которой больше нигде нет</h3>
+          <p>Главный ужин готовят под землёй: хангу, когда мясо и овощи полдня томятся в яме
+            на раскалённых камнях, а перед едой маори танцуют хаку в метре от тебя. Это их собственная
+            деревня, а не шоу для автобусов. Остальное пробуем по дороге: зелёные мидии с изумрудным краем
+            раковины растут только здесь, баранина и оленина тут обычное мясо, а не праздничное,
+            январь это пик черешни в Отаго, и её берут ведром прямо у дороги на Кромвель.</p>
+        </div>
+        <img class="whypic" src="img/why-food.jpg" alt="Стол с морепродуктами">
+      </li>
+      <li>
+        <span class="fig">30<small>лет с нуля</small></span>
+        <div>
+          <h3>Пино, который сравнивают с бургундским</h3>
+          <p>Пино нуар самый капризный сорт: он получается только там, где днём солнце, а ночью холод. Эталон делают
+            в Бургундии восемьсот лет. В Центральном Отаго первую бутылку выпустили в 1987 году, а сегодня
+            здешнее пино ставят рядом с бургундским. Тридцать лет против восьми веков.</p>
+        </div>
+        <img class="whypic" src="img/why-wine.jpg" alt="Дегустация на винодельне у воды">
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="wide">
+  <div class="mosaic">
+    <img src="img/mx-heli.jpg" alt="Вертолёт с посадкой на леднике">
+    <img src="img/mx-royspeak.jpg" alt="Рой-Пик над озером Ванака">
+    <img src="img/jetboat.jpg" alt="Джетбот по каньону Шотовер">
+    <img src="img/m2-sheep.jpg" alt="Гора Эрнсло над долиной Парадайз">
+    <img src="img/mx-tekapolupins.jpg" alt="Люпины и церковь Доброго Пастыря на озере Текапо">
+    <img src="img/haka-group.jpg" alt="Маори исполняют хаку на фоне гор">
+    <img src="img/waiheke-beach.jpg" alt="Пляж и бирюзовая бухта на Уаихеке">
+    <img src="img/mx-waiotapu.jpg" alt="Геотермальное озеро">
+  </div>
+</div>
+
+<figure class="plate">
+  <img src="img/m2-aoraki.jpg" alt="Аораки Маунт-Кук" style="object-position:center top">
+  <figcaption><div class="wrap">
+    <div class="cap-k">Южные Альпы</div>
+    <div class="cap-t">Аораки, 3 724 м</div>
+    <div class="cap-s">На вершину не поднимаемся, это для альпинистов с верёвками. Идём к подножию по ровной тропе: три часа, три подвесных моста, в конце озеро с айсбергами.</div>
+  </div></figcaption>
+</figure>
+
+<section class="alt">
+  <div class="wide">
+    <div class="shead" style="max-width:1060px;margin-inline:auto">
+      <span class="eyebrow">Карта</span>
+      <h2>Весь маршрут по дням</h2>
+    </div>
+    <div class="mapgrid">
+      <div class="mapbox">
+        <p class="maplede">Сначала Северный остров, потом перелёт на юг и Южный. За рулём около 2 100 километров,
+        и это не перегоны между точками. Дорога идёт берегом Пукаки, где вода цвета бирюзы, через перевал
+        Линдис с голыми золотыми холмами, по Кроун-Рейндж, самой высокой асфальтовой дороге страны,
+        и вдоль озера Вакатипу на Гленорчи, которую регулярно называют красивейшей в Новой Зеландии.
+        Средний переезд 190 километров, это около двух часов.</p>
+        <svg viewBox="130 430 1620 1600" role="img" aria-label="Карта маршрута по Новой Зеландии" class="nzmap">
+  <path d="M1506.3,636.2 1518.6,640.8 1543.0,657.9 1606.2,677.2 1596.3,678.0 1605.4,684.4 1609.5,683.7 1608.4,677.6 1611.0,676.8 1627.8,683.3 1629.9,679.1 1654.5,673.9 1672.9,658.6 1674.9,649.2 1682.6,644.2 1691.2,626.3 1710.0,621.6 1716.1,614.5 1729.1,610.9 1727.8,603.0 1772.6,606.8 1771.4,611.1 1776.1,614.5 1800.6,620.8 1809.3,631.5 1798.4,644.6 1797.6,650.7 1778.4,682.2 1782.6,697.0 1776.2,703.7 1779.5,714.7 1774.1,725.2 1780.4,735.2 1774.6,748.1 1777.9,755.3 1771.4,760.2 1771.1,772.5 1760.0,779.7 1738.4,802.5 1724.9,796.6 1718.7,800.5 1723.6,811.6 1719.3,821.5 1716.3,859.0 1712.0,865.4 1724.6,867.1 1729.1,872.1 1721.2,878.9 1716.4,894.1 1710.4,899.8 1704.2,883.2 1709.5,866.1 1702.2,868.7 1696.9,864.6 1676.5,862.4 1649.1,863.3 1645.5,860.7 1595.2,885.1 1590.7,897.9 1573.1,920.5 1574.1,928.6 1579.4,933.1 1580.3,951.9 1576.9,961.0 1579.2,966.9 1581.7,956.6 1591.6,962.9 1604.5,964.1 1597.1,977.2 1590.7,981.0 1588.7,994.6 1581.7,1002.2 1569.7,1042.6 1558.6,1059.0 1551.0,1064.5 1547.3,1062.1 1541.7,1067.9 1540.6,1073.3 1544.7,1070.5 1535.6,1088.4 1533.6,1101.8 1522.3,1103.5 1508.3,1122.5 1504.1,1123.1 1501.6,1133.2 1495.2,1138.4 1485.3,1157.4 1479.6,1175.0 1465.8,1186.3 1457.1,1212.5 1439.3,1233.9 1364.5,1286.5 1356.2,1288.3 1349.7,1295.0 1336.7,1296.1 1330.1,1281.6 1330.3,1262.8 1311.5,1254.9 1303.0,1257.4 1295.0,1265.9 1284.3,1261.9 1289.1,1229.3 1279.5,1227.7 1273.8,1232.1 1271.5,1237.8 1280.3,1241.7 1274.9,1247.8 1267.8,1249.6 1255.0,1247.2 1246.1,1237.9 1249.1,1230.0 1256.8,1229.6 1264.1,1223.6 1276.6,1206.7 1282.1,1205.4 1282.7,1209.6 1285.4,1207.4 1281.4,1199.7 1292.9,1189.7 1298.3,1173.4 1320.0,1146.1 1327.2,1127.9 1331.5,1100.8 1335.0,1099.6 1337.2,1070.8 1347.9,1069.2 1353.9,1062.2 1354.5,1055.1 1349.9,1063.5 1340.7,1068.8 1334.8,1066.8 1332.6,1051.3 1326.0,1036.8 1300.3,1007.0 1280.8,997.5 1268.7,997.6 1240.1,990.2 1207.0,954.8 1193.0,948.9 1158.0,943.1 1133.2,922.1 1127.0,896.3 1132.4,880.9 1140.2,873.9 1191.9,846.5 1217.9,846.0 1245.5,821.3 1251.6,799.3 1253.9,751.2 1262.8,729.9 1264.9,710.3 1261.2,699.4 1271.8,698.6 1279.8,706.7 1284.4,705.7 1281.6,701.3 1289.5,701.7 1295.5,697.5 1290.4,698.0 1291.0,694.9 1285.4,690.7 1274.8,695.7 1275.2,687.1 1282.8,684.7 1288.9,675.2 1284.3,670.1 1279.7,679.4 1274.6,679.4 1273.9,658.4 1278.4,651.2 1285.9,647.3 1300.5,647.3 1296.6,643.5 1300.4,636.2 1291.9,642.4 1284.4,643.7 1282.5,641.1 1265.0,586.3 1263.5,578.1 1271.0,574.2 1281.4,559.8 1272.7,563.5 1264.9,573.0 1240.1,522.7 1256.0,521.4 1254.1,528.6 1266.4,552.3 1266.2,540.8 1275.8,539.2 1263.8,536.4 1272.2,528.7 1274.0,532.6 1277.5,531.1 1284.8,522.5 1294.3,530.6 1295.9,522.3 1284.0,517.5 1279.0,510.1 1273.7,514.5 1275.1,505.9 1280.2,501.5 1271.4,499.4 1255.7,501.3 1249.6,514.1 1244.0,510.9 1236.6,518.0 1232.8,515.6 1219.8,470.2 1191.8,431.2 1187.5,419.6 1190.2,412.9 1190.9,421.9 1196.8,415.1 1213.0,434.2 1210.4,437.3 1217.3,440.0 1211.7,442.5 1212.7,446.5 1218.3,450.2 1218.7,445.1 1223.3,453.8 1231.0,439.7 1227.2,438.6 1228.9,426.7 1224.6,427.9 1228.3,415.3 1224.5,409.5 1228.8,404.3 1223.8,399.7 1215.7,408.5 1205.3,407.4 1200.3,398.3 1204.7,393.5 1215.6,396.4 1235.8,381.9 1233.9,379.5 1221.2,387.7 1219.7,384.7 1213.9,390.1 1205.5,389.0 1204.8,385.6 1208.3,384.3 1213.7,388.1 1213.8,381.4 1221.4,373.1 1222.1,367.0 1227.0,368.2 1218.6,361.6 1210.1,379.7 1211.7,375.1 1207.5,375.8 1204.5,369.9 1200.2,371.1 1202.3,360.7 1195.8,365.1 1196.1,359.1 1189.9,362.4 1188.6,369.4 1195.7,370.8 1198.3,378.6 1202.4,375.6 1206.5,380.4 1200.1,386.1 1191.0,382.2 1183.4,370.7 1172.5,369.4 1161.4,359.8 1159.2,347.8 1148.2,333.3 1153.0,329.6 1150.0,317.9 1152.4,327.0 1144.4,333.4 1157.5,350.1 1161.2,363.9 1180.1,386.3 1187.8,388.1 1184.0,392.3 1188.9,395.3 1189.0,404.7 1175.0,410.1 1172.1,408.2 1165.1,386.7 1142.3,352.2 1076.6,266.5 1083.5,253.4 1083.8,244.9 1091.6,241.4 1097.1,247.6 1096.6,239.4 1101.4,243.7 1101.5,237.0 1105.2,232.8 1107.6,234.8 1113.4,223.3 1108.0,226.5 1105.3,220.4 1103.7,227.6 1100.5,217.3 1100.9,232.9 1090.1,230.4 1090.3,235.3 1078.7,236.2 1074.5,243.7 1074.5,259.9 1058.5,236.1 1064.2,229.0 1060.9,228.3 1065.0,221.7 1057.2,226.2 1055.2,233.6 1049.3,225.3 1056.0,217.1 1048.1,220.8 1032.9,206.0 1034.5,201.3 1041.1,202.7 1047.4,193.2 1048.6,178.7 1043.1,163.0 993.9,96.7 974.4,81.5 977.4,71.4 995.9,75.7 1006.4,70.5 1031.2,70.0 1026.0,74.3 1026.6,88.0 1021.6,89.6 1015.1,79.1 1014.2,88.2 1010.2,87.7 1007.5,92.5 1012.6,96.9 1016.7,92.5 1016.7,98.8 1020.2,96.3 1021.1,111.3 1024.3,97.5 1021.9,92.1 1025.1,93.0 1030.1,118.9 1042.6,131.6 1047.3,142.4 1036.8,132.4 1039.4,140.8 1063.2,154.8 1057.2,165.7 1058.7,173.4 1066.6,172.8 1072.4,164.8 1069.0,148.0 1079.5,145.9 1079.7,137.5 1083.4,135.2 1084.1,145.2 1089.2,142.6 1091.3,148.1 1077.2,152.5 1086.8,168.2 1103.5,172.8 1104.6,168.1 1100.4,160.8 1104.1,157.9 1117.3,166.4 1123.3,164.1 1131.0,172.2 1122.8,181.0 1127.5,186.8 1132.6,186.4 1134.7,172.3 1146.3,170.1 1146.6,175.2 1155.9,180.1 1160.5,189.7 1177.7,191.1 1184.0,202.0 1177.4,203.3 1176.1,197.5 1173.2,199.6 1170.2,196.5 1165.3,197.9 1168.9,204.5 1163.4,205.3 1165.6,209.1 1176.5,209.0 1175.0,217.7 1182.1,224.8 1184.0,233.7 1186.9,226.3 1190.6,228.9 1193.2,224.8 1197.6,227.9 1194.4,222.0 1183.8,217.8 1202.9,216.0 1204.1,211.0 1213.1,205.3 1209.7,221.1 1212.4,226.3 1219.2,225.5 1216.9,228.9 1221.5,232.1 1220.8,236.0 1208.8,227.3 1217.8,243.6 1226.8,243.4 1233.1,255.6 1226.6,258.3 1241.2,268.7 1243.0,280.3 1229.4,280.0 1239.8,286.9 1235.7,293.2 1245.1,297.7 1247.6,313.6 1244.7,315.0 1236.0,309.2 1231.8,300.9 1226.5,303.4 1221.1,301.3 1216.6,306.3 1217.1,299.1 1212.9,292.1 1211.4,311.7 1216.3,314.8 1218.8,309.8 1231.2,310.3 1236.7,314.4 1229.6,324.1 1232.5,338.2 1242.9,346.4 1248.2,346.5 1251.4,361.8 1253.9,360.0 1268.3,382.2 1279.1,387.2 1275.5,397.9 1286.5,399.8 1277.8,401.9 1269.0,399.5 1272.1,423.0 1268.7,413.9 1263.9,411.1 1266.4,419.8 1262.7,421.9 1266.6,424.3 1263.0,429.6 1263.9,442.7 1273.1,446.0 1283.9,444.3 1274.4,449.4 1264.8,447.6 1278.5,480.2 1272.5,476.2 1265.6,478.0 1266.8,474.9 1263.0,474.2 1261.5,469.4 1250.5,474.5 1250.1,477.9 1258.9,477.4 1253.4,481.3 1256.9,482.6 1259.2,495.3 1268.0,484.0 1283.3,484.3 1289.3,487.9 1284.7,496.0 1287.9,504.1 1294.2,482.8 1298.7,498.9 1307.2,498.1 1305.6,488.4 1316.3,493.3 1317.9,505.8 1335.3,499.6 1349.3,511.2 1349.2,536.1 1358.5,548.6 1371.3,547.9 1383.9,541.3 1386.0,551.8 1392.1,552.0 1382.7,529.3 1380.8,509.2 1365.7,487.6 1376.1,486.4 1377.0,484.2 1368.6,482.9 1374.5,480.9 1370.1,477.9 1379.2,475.5 1379.0,470.1 1376.2,472.1 1371.1,461.4 1375.5,448.0 1355.2,434.7 1354.1,422.1 1366.6,421.6 1375.5,431.8 1380.2,427.7 1383.9,435.7 1380.8,443.4 1389.7,446.0 1390.6,454.4 1384.4,454.6 1385.9,458.0 1392.6,458.6 1392.3,471.2 1400.6,467.2 1398.2,463.5 1408.7,464.4 1417.5,460.2 1419.7,464.4 1423.4,462.2 1424.1,468.1 1419.2,467.6 1415.6,473.5 1407.9,477.1 1404.2,488.1 1409.4,492.2 1411.1,481.3 1423.8,482.9 1430.4,508.0 1427.0,520.5 1432.5,516.9 1434.1,521.7 1428.6,533.4 1433.8,535.6 1434.1,545.0 1429.3,538.9 1432.2,548.5 1429.7,551.7 1435.9,554.8 1446.5,589.2 1442.3,587.3 1441.7,589.7 1454.1,595.6 1469.7,615.7 1453.8,609.8 1459.2,608.2 1448.1,598.3 1438.1,599.1 1439.1,609.2 1445.4,610.6 1444.9,618.8 1455.1,617.9 1457.5,624.8 1460.7,623.5 1464.4,627.9 1467.5,623.1 1470.7,623.7 1474.0,633.4 1480.1,632.1 1473.7,617.6 1476.1,615.4 1487.9,629.0 1506.3,636.2Z M876.3,1269.3 871.8,1283.6 858.2,1304.0 853.9,1303.8 831.0,1319.4 803.5,1319.8 803.5,1330.3 806.9,1332.9 802.4,1336.7 795.4,1364.4 785.8,1379.4 780.2,1411.1 770.5,1427.6 769.3,1435.6 751.5,1464.8 728.3,1486.3 707.8,1513.9 654.5,1539.6 649.8,1546.2 654.1,1546.7 653.0,1549.5 636.2,1549.0 623.9,1565.2 624.5,1568.3 631.1,1560.1 637.6,1559.1 628.7,1571.9 623.2,1569.7 611.1,1573.9 598.4,1590.6 577.0,1599.9 556.8,1627.5 547.2,1633.0 539.2,1635.3 536.3,1633.0 530.0,1638.4 513.4,1641.0 505.7,1648.4 485.4,1657.1 465.3,1671.0 464.0,1676.2 444.3,1685.6 436.5,1694.7 427.4,1699.2 414.3,1702.9 402.8,1694.9 385.5,1704.2 364.2,1708.1 367.7,1709.8 352.7,1730.1 339.9,1736.3 335.9,1742.4 326.0,1745.2 331.9,1753.1 315.7,1755.8 315.4,1762.9 304.8,1769.4 288.6,1786.8 290.9,1803.4 301.5,1809.6 302.7,1818.7 283.7,1801.1 279.8,1802.4 264.8,1814.8 254.1,1817.8 259.2,1827.0 265.7,1831.0 259.7,1830.2 253.0,1823.4 247.4,1826.4 255.6,1836.2 250.1,1850.7 246.3,1847.6 250.1,1837.4 246.8,1832.6 235.1,1834.0 233.8,1844.5 242.0,1871.1 235.2,1869.9 233.9,1853.0 228.4,1842.9 198.2,1863.3 218.6,1877.5 194.8,1868.2 190.8,1871.1 196.2,1882.4 208.6,1887.0 197.7,1886.8 196.7,1894.2 194.9,1885.9 187.2,1877.2 177.7,1888.1 195.1,1902.1 189.5,1902.4 176.1,1891.8 169.7,1895.6 177.0,1917.8 204.6,1913.2 201.9,1921.1 213.7,1925.0 207.0,1928.0 197.8,1920.1 176.9,1926.4 189.3,1936.5 200.2,1951.7 194.0,1951.2 190.7,1942.2 182.8,1936.3 178.0,1944.8 172.1,1944.5 178.1,1934.1 169.8,1928.5 161.4,1932.1 164.2,1926.5 151.5,1918.4 141.9,1933.3 155.0,1939.2 158.5,1935.2 163.1,1945.1 140.1,1939.5 127.2,1965.2 133.5,1970.6 177.9,1955.3 177.0,1959.4 163.4,1964.8 171.4,1966.8 169.0,1969.5 153.5,1966.6 137.3,1972.8 138.3,1983.5 153.9,1982.1 141.8,1986.6 138.5,1994.5 172.7,1990.1 170.3,1994.5 154.6,2003.1 116.3,2009.3 104.6,2006.7 96.0,2008.5 94.7,2011.8 92.9,2025.9 97.0,2043.4 100.8,2038.9 118.3,2034.8 133.1,2017.3 134.6,2021.2 125.5,2030.7 131.3,2033.2 143.1,2030.0 140.5,2033.9 122.2,2039.5 115.7,2056.4 122.9,2055.7 133.2,2046.7 134.8,2053.7 140.2,2048.4 139.1,2043.7 145.7,2038.3 162.6,2031.6 146.0,2041.6 134.1,2060.5 123.4,2067.1 131.3,2077.3 145.0,2080.3 165.3,2079.1 193.3,2087.1 211.5,2087.3 228.3,2082.7 233.3,2068.1 247.6,2067.1 269.8,2073.4 280.4,2089.3 280.2,2094.1 275.7,2097.2 288.0,2108.7 299.9,2108.8 305.6,2104.1 320.3,2106.5 319.9,2101.4 336.6,2098.8 341.8,2101.3 357.1,2123.7 362.4,2117.4 360.6,2112.8 364.1,2111.7 367.5,2124.6 359.9,2132.6 356.9,2129.5 349.9,2130.9 350.9,2135.8 355.4,2135.1 358.4,2141.5 367.9,2147.8 361.8,2136.9 363.1,2133.5 388.6,2137.4 392.2,2140.7 374.5,2138.7 370.8,2143.6 381.7,2145.3 402.6,2143.6 399.8,2134.1 412.3,2136.7 406.3,2139.7 431.6,2136.8 437.0,2154.5 445.8,2152.9 454.7,2156.7 462.3,2155.7 463.1,2148.9 467.3,2154.3 472.4,2155.0 477.6,2150.7 477.3,2145.8 480.8,2153.6 500.3,2147.5 507.9,2150.7 515.1,2146.8 522.2,2148.6 521.9,2142.8 526.2,2140.1 538.0,2137.7 543.0,2139.9 553.1,2135.8 559.9,2126.4 546.4,2124.7 566.0,2125.3 574.1,2120.0 575.2,2105.0 602.4,2087.2 609.6,2078.9 622.8,2072.9 629.4,2065.9 632.6,2049.8 643.8,2036.4 658.1,2029.7 694.5,2025.9 696.4,2020.2 706.3,2020.2 704.9,2004.0 694.1,2015.3 680.4,2022.5 673.9,2021.9 691.2,2006.6 703.1,2002.7 694.3,1996.6 684.4,1996.0 683.2,1992.4 693.6,1987.5 697.0,1980.8 691.7,1977.4 700.8,1977.2 704.0,1971.9 702.4,1967.0 705.8,1969.3 716.6,1954.9 716.4,1947.3 724.5,1938.4 719.1,1931.8 731.6,1899.6 757.5,1871.2 765.2,1857.2 766.8,1837.9 761.3,1833.6 767.2,1829.7 764.8,1796.0 761.6,1794.1 767.5,1791.4 773.2,1782.1 777.5,1761.4 789.3,1746.7 831.8,1720.2 850.5,1711.4 861.2,1711.0 910.1,1682.2 933.6,1677.5 934.1,1660.6 939.0,1655.4 951.4,1654.7 960.6,1661.8 970.0,1663.4 946.8,1669.9 937.2,1676.3 987.0,1665.4 983.2,1671.2 993.8,1680.7 1015.8,1686.2 1009.2,1670.9 1012.0,1659.3 1014.6,1659.4 1019.9,1682.1 1024.8,1682.0 1025.1,1677.9 1028.8,1678.8 1031.1,1673.7 1033.5,1676.3 1036.7,1656.8 1028.9,1641.8 1024.6,1645.8 1016.3,1641.4 1010.3,1648.8 1010.1,1638.3 1005.5,1636.1 1002.7,1644.7 999.0,1637.8 975.0,1641.4 981.1,1636.0 996.1,1633.7 983.9,1628.7 986.0,1625.9 989.4,1627.6 981.8,1603.0 984.2,1577.2 997.5,1555.9 1012.1,1547.1 1034.5,1541.1 1044.4,1529.4 1060.9,1523.5 1066.6,1516.0 1065.5,1507.2 1073.3,1500.0 1087.2,1469.8 1084.9,1467.8 1094.6,1459.2 1101.1,1441.7 1116.2,1431.6 1122.9,1435.3 1119.9,1426.0 1125.1,1418.2 1130.8,1416.9 1133.1,1411.2 1152.7,1394.1 1159.3,1371.0 1195.7,1332.9 1203.5,1316.5 1198.4,1316.4 1191.5,1310.1 1187.2,1288.9 1176.5,1276.5 1178.6,1285.4 1173.7,1286.1 1175.4,1283.6 1170.1,1277.4 1168.5,1265.8 1178.0,1247.8 1184.2,1242.4 1184.6,1246.1 1190.2,1243.9 1187.3,1250.3 1197.5,1245.4 1208.5,1228.4 1191.5,1236.3 1182.7,1231.7 1171.4,1233.6 1165.9,1238.0 1153.2,1238.6 1159.2,1231.8 1185.0,1228.9 1187.8,1223.5 1191.9,1224.1 1185.0,1210.8 1190.3,1207.2 1191.1,1215.6 1194.4,1216.1 1208.1,1191.1 1193.5,1202.8 1187.8,1198.6 1192.7,1196.0 1187.0,1185.2 1184.0,1192.6 1180.0,1190.7 1174.2,1194.2 1162.6,1185.2 1157.8,1189.3 1159.0,1192.3 1155.1,1192.8 1160.9,1200.1 1166.4,1194.1 1165.2,1201.5 1168.6,1207.2 1163.4,1205.8 1159.0,1215.8 1157.2,1210.2 1159.9,1205.2 1154.9,1204.8 1147.7,1213.2 1147.1,1223.3 1181.1,1221.4 1166.4,1224.3 1167.5,1227.7 1145.9,1228.2 1152.6,1230.6 1130.4,1239.8 1128.6,1236.0 1141.8,1232.1 1143.8,1221.8 1136.6,1216.0 1146.1,1209.5 1144.8,1204.1 1150.5,1205.4 1155.5,1200.8 1139.0,1199.9 1130.8,1210.0 1130.7,1199.0 1134.1,1195.8 1131.3,1192.1 1136.8,1189.5 1139.5,1193.1 1152.1,1191.3 1149.8,1186.7 1155.5,1185.9 1157.7,1178.8 1166.4,1180.9 1165.4,1175.7 1160.0,1173.0 1149.9,1177.4 1150.1,1181.6 1140.5,1187.4 1139.5,1178.2 1133.9,1185.3 1119.2,1190.6 1116.3,1196.7 1125.1,1193.7 1125.3,1198.6 1115.8,1202.5 1117.3,1208.2 1111.9,1208.6 1111.1,1203.1 1105.2,1199.6 1099.2,1204.7 1100.8,1208.3 1095.4,1208.8 1092.5,1214.0 1083.6,1217.9 1082.9,1213.5 1059.0,1237.2 1048.6,1243.5 1035.4,1243.8 1031.1,1238.6 1035.0,1234.7 1031.6,1220.9 1028.4,1223.1 1024.4,1215.7 1025.8,1210.7 1030.0,1212.8 1024.9,1195.2 1019.9,1194.1 1028.9,1184.2 1029.4,1171.1 1022.0,1167.9 1023.7,1159.4 1017.2,1153.4 1015.9,1157.0 1011.3,1156.0 1009.9,1160.9 1000.0,1165.5 980.6,1145.5 976.8,1148.0 977.7,1138.2 971.8,1131.6 976.6,1132.2 982.5,1108.9 1019.2,1110.5 991.9,1105.5 972.5,1106.0 958.1,1116.1 958.6,1118.5 968.3,1115.7 963.3,1122.7 952.4,1127.8 955.2,1119.7 952.8,1119.8 929.2,1143.5 905.2,1157.2 898.5,1170.0 893.8,1172.3 893.3,1234.0 898.6,1240.1 890.9,1243.2 888.1,1261.9 876.3,1269.3Z M312.1,2163.7 319.6,2175.6 332.3,2187.2 337.4,2187.8 336.3,2193.0 339.0,2194.9 323.0,2195.4 322.8,2192.6 313.9,2192.0 314.5,2198.6 306.8,2206.4 318.7,2200.1 332.8,2205.7 330.6,2210.3 343.8,2206.2 348.6,2211.5 346.0,2219.1 339.5,2219.4 347.9,2226.0 341.6,2222.6 336.7,2224.7 337.3,2229.9 333.3,2226.9 334.0,2230.6 317.8,2230.0 294.2,2243.2 281.3,2239.9 278.7,2234.6 271.7,2238.1 271.2,2242.6 268.3,2240.3 257.6,2248.0 272.4,2246.6 266.3,2255.5 263.0,2250.8 257.3,2257.2 244.6,2258.4 245.5,2244.6 258.8,2237.6 256.6,2236.2 259.2,2221.4 266.8,2216.8 274.5,2218.3 273.4,2204.3 283.3,2200.1 283.8,2187.7 277.3,2179.1 279.2,2160.9 300.7,2157.0 312.1,2163.7Z" class="land"/>
+  <polyline points="1270.3,484.4 405.6,1876.1" class="fly"/>
+  <path d="M1270.3,484.4 1269.5,486.2 1282.3,497.1 1290.4,512.2 1291.3,517.2 1301.7,538.4 1301.5,543.1 1310.2,555.1 1313.5,562.7 1312.8,567.8 1321.1,579.0 1321.9,583.0 1325.3,585.7 1327.5,596.6 1331.0,600.8 1330.2,608.7 1333.1,612.0 1334.6,626.5 1333.8,634.7 1333.1,636.2 1326.2,637.9 1325.3,640.4 1326.4,649.1 1331.3,655.1 1334.6,667.4 1331.0,669.8 1332.3,682.8 1326.0,691.5 1329.8,693.3 1332.1,700.4 1332.5,709.1 1331.1,711.1 1333.7,712.4 1329.6,723.3 1326.9,722.6 1323.5,725.6 1318.7,724.6 1323.5,725.6 1326.9,722.6 1329.6,723.2 1334.1,711.6 1339.2,710.3 1342.2,707.6 1345.6,707.8 1349.5,704.0 1353.7,697.9 1352.2,693.3 1352.8,686.4 1351.3,684.6 1359.3,680.6 1364.4,675.9 1365.0,668.1 1368.1,663.6 1375.6,662.5 1382.5,666.1 1387.2,671.0 1396.7,671.3 1404.9,661.5 1407.8,660.4 1406.7,658.8 1401.7,659.8 1400.0,656.1 1402.2,660.1 1406.7,658.8 1407.8,660.5 1410.8,659.8 1413.9,661.4 1410.6,674.9 1412.4,677.7 1419.9,680.5 1423.7,678.8 1431.9,680.3 1441.7,685.4 1453.0,686.8 1463.0,692.5 1470.5,692.7 1476.0,695.5 1479.0,703.5 1481.2,703.6 M1481.2,703.6 1480.5,709.6 1482.9,716.4 1487.7,719.2 1499.2,733.3 1494.2,745.5 1495.5,749.7 1492.7,769.4 1490.8,777.0 1485.2,784.0 1478.6,785.2 1467.9,792.2 1461.9,796.6 1461.5,800.1 1469.0,802.4 1489.1,826.0 1510.9,835.3 1519.3,842.3 1529.4,860.8 1526.2,869.5 1531.1,870.9 1531.0,875.6 1532.9,878.8 1544.1,887.2 1542.3,892.8 1546.3,898.4 1546.1,902.0 1549.5,904.2 1551.4,908.7 1557.2,909.9 1557.1,912.1 1560.0,913.4 1561.0,916.0 1566.5,917.9 1569.3,923.4 1569.6,934.8 1574.9,934.2 M1574.9,934.2 1569.5,934.9 1569.3,923.4 1566.5,917.9 1561.0,916.0 1560.0,913.4 1557.1,912.1 1557.2,909.9 1551.4,908.7 1549.5,904.2 1546.1,902.0 1546.3,898.4 1542.3,892.8 1544.1,887.2 1532.9,878.8 1531.0,875.6 1531.1,870.9 1526.2,869.5 1529.4,860.8 1519.3,842.3 1510.9,835.3 1489.1,826.0 1468.9,802.3 1458.1,800.2 1455.6,796.8 M1455.6,796.8 1449.1,779.5 1453.0,771.2 1454.2,754.1 1452.8,748.6 1447.8,747.2 1445.8,744.5 1446.2,737.1 1440.6,731.5 1431.1,727.7 1429.7,725.1 1428.4,725.8 1424.1,722.1 1420.3,715.4 1410.3,706.4 1406.5,697.1 1398.0,690.2 1398.7,670.6 1393.0,672.2 1387.3,671.1 1371.3,658.3 1361.4,657.7 1352.6,649.3 1353.4,645.9 1345.5,633.8 1334.0,625.9 1333.1,612.0 1330.2,608.8 1331.0,600.8 1327.5,596.7 1325.4,585.8 1321.9,583.0 1321.0,578.9 1312.8,567.8 1313.4,562.5 1309.3,553.6 1301.5,543.1 1301.6,538.4 1282.3,497.2 1269.5,486.3 1270.3,484.4" class="rd rd-n"/>
+  <path d="M405.6,1876.2 408.3,1876.6 419.0,1871.2 434.3,1866.3 439.0,1867.2 440.7,1869.7 444.9,1869.5 449.7,1856.5 462.0,1842.1 467.7,1830.0 472.0,1827.3 473.0,1819.8 M473.0,1819.8 477.8,1819.2 490.3,1825.6 493.7,1824.7 501.7,1827.3 504.0,1835.2 503.4,1840.8 510.3,1844.1 514.0,1842.9 517.4,1838.1 520.7,1837.2 524.6,1838.9 525.6,1837.5 525.3,1823.1 521.3,1815.7 528.8,1804.8 541.4,1798.9 545.3,1800.7 547.2,1796.9 551.3,1796.3 560.8,1785.5 570.9,1788.3 593.0,1782.1 593.6,1780.2 591.7,1778.4 595.7,1762.3 611.8,1743.4 612.9,1732.7 610.6,1727.3 614.3,1718.2 613.9,1691.8 611.4,1686.8 613.1,1684.8 612.3,1679.2 609.8,1677.3 612.8,1661.1 611.0,1656.6 608.9,1655.5 M608.9,1655.5 611.0,1656.6 612.8,1661.2 609.8,1677.2 612.3,1679.2 613.1,1684.8 611.4,1686.8 613.9,1691.8 614.3,1718.2 610.6,1727.3 612.4,1732.5 615.6,1733.2 619.6,1730.5 622.4,1731.9 625.4,1729.4 632.7,1735.4 640.3,1731.5 644.8,1723.5 644.8,1715.3 653.0,1701.6 654.6,1700.3 662.9,1701.5 M662.9,1701.5 654.6,1700.3 653.0,1701.6 644.8,1715.3 644.8,1723.5 640.3,1731.5 632.7,1735.4 625.4,1729.4 622.4,1731.9 619.6,1730.5 615.6,1733.2 612.8,1732.8 611.7,1743.8 595.7,1762.4 591.7,1778.4 593.6,1780.3 592.9,1782.2 570.9,1788.3 560.8,1785.5 551.3,1796.3 547.2,1796.9 545.3,1800.7 541.4,1798.9 528.7,1804.8 521.3,1815.6 522.2,1819.0 524.8,1820.6 525.7,1825.4 525.0,1838.7 520.7,1837.2 517.4,1838.1 514.0,1842.9 511.3,1843.3 501.4,1851.9 487.7,1869.7 485.2,1877.5 481.9,1876.8 480.8,1880.4 473.2,1880.8 463.6,1871.0 458.9,1876.7 460.0,1880.1 458.4,1880.8 457.8,1878.8 454.6,1877.3 437.6,1872.5 432.4,1867.0 408.3,1876.6 405.6,1876.2 M405.6,1876.2 408.3,1876.6 415.5,1873.5 415.8,1875.9 418.5,1877.4 419.9,1890.7 416.6,1909.5 420.3,1919.7 417.1,1926.6 406.8,1938.2 407.5,1942.3 411.5,1943.8 406.0,1954.9 399.9,1958.9 390.6,1957.5 389.5,1961.9 383.6,1965.5 376.8,1976.9 371.7,1975.0 347.6,1982.4 346.0,1984.9 340.3,1982.8 325.1,1967.2 314.8,1966.1 307.4,1962.5 296.6,1963.6 288.2,1959.7 281.5,1958.7 272.1,1965.0 255.7,1967.3 M255.7,1967.3 272.1,1965.0 281.5,1958.7 288.2,1959.7 296.6,1963.6 307.4,1962.5 314.8,1966.1 325.1,1967.2 340.3,1982.8 346.0,1984.9 347.6,1982.4 371.7,1975.0 376.8,1976.9 383.6,1965.5 389.5,1961.9 390.6,1957.5 399.9,1958.9 406.0,1954.9 411.5,1943.8 407.5,1942.3 406.8,1938.2 417.1,1926.6 420.3,1919.7 416.6,1909.5 419.9,1890.7 418.5,1877.4 415.8,1876.0 415.4,1873.5 408.3,1876.6 405.6,1876.2 M405.6,1876.2 398.7,1880.4 378.3,1884.4 374.1,1875.0 373.8,1862.9 369.0,1852.8 369.0,1847.3 366.2,1844.9 369.0,1847.3 369.0,1852.8 373.8,1862.9 374.1,1875.0 378.3,1884.4 398.7,1880.4 405.6,1876.2" class="rd rd-s"/>
+  <polyline points="1270.3,484.4 1315.3,476.2" class="ferry"/><polyline points="191.3,1947.4 255.1,1967.8" class="boat"/>
+  <text x="990" y="800" text-anchor="middle" class="isl">Северный<tspan x="990" dy="58">остров</tspan></text>
+  <text x="430" y="1560" text-anchor="middle" class="isl">Южный<tspan x="430" dy="58">остров</tspan></text>
+  <g><circle cx="1270.3" cy="484.4" r="26" class="pt"/><text x="1270.3" y="497.4" text-anchor="middle" class="num">2</text></g><g><circle cx="1315.3" cy="476.2" r="26" class="pt"/><text x="1315.3" y="489.2" text-anchor="middle" class="num">3</text></g><g><circle cx="1319.0" cy="724.7" r="26" class="pt"/><text x="1319.0" y="737.7" text-anchor="middle" class="num">4</text></g><g><circle cx="1400.7" cy="658.4" r="26" class="pt"/><text x="1400.7" y="671.4" text-anchor="middle" class="num">4</text></g><g><circle cx="1481.2" cy="703.6" r="26" class="pt"/><text x="1481.2" y="716.6" text-anchor="middle" class="num">5</text></g><g><circle cx="1574.9" cy="934.2" r="31" class="pt pt-extra"/><text x="1574.9" y="947.2" text-anchor="middle" class="num only wide">6–7</text></g><g><circle cx="1455.6" cy="796.8" r="26" class="pt"/><text x="1455.6" y="809.8" text-anchor="middle" class="num">8</text></g><g><circle cx="405.6" cy="1876.1" r="31" class="pt"/><text x="405.6" y="1889.1" text-anchor="middle" class="num wide">9·19</text></g><g><circle cx="473.0" cy="1819.8" r="31" class="pt"/><text x="473.0" y="1832.8" text-anchor="middle" class="num wide">10–12</text></g><g><circle cx="608.9" cy="1655.5" r="26" class="pt"/><text x="608.9" y="1668.5" text-anchor="middle" class="num">13</text></g><g><circle cx="662.9" cy="1701.5" r="26" class="pt"/><text x="662.9" y="1714.5" text-anchor="middle" class="num">14</text></g><g><circle cx="479.9" cy="1879.9" r="26" class="pt"/><text x="479.9" y="1892.9" text-anchor="middle" class="num">15</text></g><g><circle cx="191.3" cy="1947.4" r="31" class="pt"/><text x="191.3" y="1960.4" text-anchor="middle" class="num wide">16–17</text></g><g><circle cx="366.1" cy="1845.2" r="26" class="pt pt-extra"/><text x="366.1" y="1858.2" text-anchor="middle" class="num only">18</text></g>
+</svg>
+        <div class="mapfoot">
+          <p class="mapnote">Цифры на карте это номера дней. Оранжевым отмечены те, что есть только в полном варианте: в коротком варианте выпадают Напиер с Хокс-Бей и два финальных дня в Квинстауне, а Даутфул становится дневным круизом вместо ночёвки на борту. В коротком выходит около 1 720 километров.</p>
+          <div class="maplegend">
+          <span><i class="k-n"></i>Северный остров</span>
+          <span><i class="k-x"></i>Дни только полного варианта</span>
+          <span><i class="k-s"></i>Южный остров</span>
+          <span><i class="k-f"></i>Перелёт между островами</span>
+          <span><i class="k-b"></i>Автопаром на Уаихеке и катер к фьорду</span>
+        </div>
+        </div>
+      </div>
+      <div class="daytable">
+        <table class="dayt">
+          <thead><tr><th>День</th><th>Куда едем</th><th>За рулём</th></tr></thead>
+          <tbody><tr class="flyrow"><td class="dnum">✈<span class="ddate">28.12</span></td><td class="dtxt">Москва → Шанхай <span class="dnote">вылет 20:25 мск, прилёт в Шанхай 10:35</span></td><td class="dkm">9,5 ч в воздухе</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">29.12</span></td><td class="dtxt">Шанхай, стыковка <span class="dnote">прилёт 10:35, вылет 00:05. Безвизовый транзит, до центра 20 минут: поезд на магнитной подушке плюс метро: Бунд, Юйюань, ужин в Пудуне, в аэропорту за три часа. Багаж до Окленда</span></td><td class="dkm">13,5 ч</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">30.12</span></td><td class="dtxt">Шанхай → Окленд <span class="dnote">прилёт 30 декабря в 15:45</span></td><td class="dkm">12 ч в воздухе</td></tr><tr class=""><td class="dnum">1<span class="ddate">30.12</span></td><td class="dtxt">Окленд <span class="dnote">прилёт в 15:45, трансфер в отель, вечер свободный</span></td><td class="dkm">трансфер</td></tr><tr class=""><td class="dnum">2<span class="ddate">31.12</span></td><td class="dtxt">Окленд <span class="dnote">гид: Маунт-Иден и набережная, вечером Новый год</span></td><td class="dkm">пешком</td></tr><tr class=""><td class="dnum">3<span class="ddate">01.01</span></td><td class="dtxt">Уаихеке <span class="dnote">берём машины, автопаром</span></td><td class="dkm">автопаром</td></tr><tr class=""><td class="dnum">4<span class="ddate">02.01</span></td><td class="dtxt">Окленд → Вайтомо → Хоббитон → Роторуа <span class="dnote">пещеры со светлячками и Шир</span></td><td class="dkm">375 км</td></tr><tr class=""><td class="dnum">5<span class="ddate">03.01</span></td><td class="dtxt">Роторуа <span class="dnote">гейзеры и маори, на месте</span></td><td class="dkm">60 км по городу</td></tr><tr class="only18row"><td class="dnum">6<span class="ddate">04.01</span></td><td class="dtxt">Роторуа → Напиер <span class="dnote">город целиком в ар-деко</span></td><td class="dkm">220 км</td></tr><tr class="only18row"><td class="dnum">7<span class="ddate">05.01</span></td><td class="dtxt">Напиер, Хокс-Бей <span class="dnote">винный день, на месте</span></td><td class="dkm">80 км по региону</td></tr><tr class=""><td class="dnum">8<span class="ddate">06.01</span></td><td class="dtxt">Напиер → Таупо <span class="dnote">водопад Хука на катере</span></td><td class="dkm">145 км</td></tr><tr class=""><td class="dnum">9<span class="ddate">07.01</span></td><td class="dtxt">Таупо → Окленд, перелёт в Квинстаун <span class="dnote">сдаём машину, берём вторую на юге</span></td><td class="dkm">270 км + 2 ч лёта</td></tr><tr class=""><td class="dnum">10<span class="ddate">08.01</span></td><td class="dtxt">Квинстаун → Ванака <span class="dnote">через перевал Кроун-Рейндж</span></td><td class="dkm">70 км</td></tr><tr class=""><td class="dnum">11<span class="ddate">09.01</span></td><td class="dtxt">Ванака <span class="dnote">утром Rippon, дальше свободно</span></td><td class="dkm">без переезда</td></tr><tr class=""><td class="dnum">12<span class="ddate">10.01</span></td><td class="dtxt">Ванака <span class="dnote">свободный день: Рой-Пик, озеро, кофейни</span></td><td class="dkm">без переезда</td></tr><tr class=""><td class="dnum">13<span class="ddate">11.01</span></td><td class="dtxt">Ванака → Маунт-Кук <span class="dnote">пикник на Пукаки, трек по долине Хукер</span></td><td class="dkm">210 км</td></tr><tr class=""><td class="dnum">14<span class="ddate">12.01</span></td><td class="dtxt">Маунт-Кук → Текапо <span class="dnote">люпины, ночью обсерватория</span></td><td class="dkm">105 км</td></tr><tr class=""><td class="dnum">15<span class="ddate">13.01</span></td><td class="dtxt">Текапо → Банноберн → Квинстаун <span class="dnote">винный день</span></td><td class="dkm">260 км</td></tr><tr class=""><td class="dnum">16<span class="ddate">14.01</span></td><td class="dtxt">Квинстаун → Манапоури → Даутфул-Саунд <span class="dnote">катер через озеро и перевал во фьорд</span></td><td class="dkm">175 км</td></tr><tr class="only18row"><td class="dnum">17<span class="ddate">15.01</span></td><td class="dtxt">Даутфул-Саунд → Квинстаун <span class="dnote">возвращаемся из фьорда</span></td><td class="dkm">175 км</td></tr><tr class="only18row"><td class="dnum">18<span class="ddate">16.01</span></td><td class="dtxt">Квинстаун → Гленорчи → Квинстаун <span class="dnote">джипы в долину Парадайз</span></td><td class="dkm">95 км</td></tr><tr class=""><td class="dnum">19<span class="ddate">17.01</span></td><td class="dtxt">Вылет <span class="dnote">сдаём машину, перелёт в Окленд</span></td><td class="dkm">без переезда</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">17.01</span></td><td class="dtxt">Окленд → Шанхай <span class="dnote">вылет вечером, в коротком варианте это 13 января</span></td><td class="dkm">12 ч в воздухе</td></tr><tr class="flyrow"><td class="dnum">✈<span class="ddate">18.01</span></td><td class="dtxt">Шанхай → Москва <span class="dnote">стыковка около 8 часов, дома около 18:30. В коротком варианте 14 января</span></td><td class="dkm">9,5 ч в воздухе</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">День за днём</span>
+      <h2>Девятнадцать дней по порядку</h2>
+      <p class="lede">Подробно: что смотрим, куда идём и чем это интересно.
+        Дни 6, 7, 17 и 18 есть только в полном варианте. Отели названы ориентировочно: бронировать
+        их будем за год, и к тому моменту что-то может оказаться занято или подорожать. Уровень
+        и расположение останутся теми же, названия могут поменяться.</p>
+    </div>
+    <div class="route">
+
+      <div class="stop">
+        <div class="day"><div class="d">30.12&ndash;31.12<br>чт&ndash;пт</div><div class="n">1&ndash;2</div></div>
+        <div class="body">
+          <h3>Прилёт и Новый год в Окленде</h3>
+          <p>Прилетаем 30 декабря, вечер свободный. 31-го берём русскоязычного гида на полдня, а вечером встречаем Новый год. Новый год приходит сюда раньше, чем почти
+            куда-либо на планете: тут уже первое января, когда в Москве до курантов ещё десять часов.
+            Город в эту ночь выходит на набережную, фейерверк бьют с телебашни Sky Tower.</p>
+          <p>Окленд это крупнейший город страны, полтора миллиона человек, и стоит он на перешейке
+            между двумя заливами, а заодно на полусотне потухших вулканов. На один из них, Маунт-Иден,
+            поднимаемся пешком минут за двадцать: сверху видно сразу два океана, Тасманово море
+            с одной стороны и Тихий с другой. Вечером ужин в одном из лучших ресторанов города.</p>
+          <p>Полдня 31 декабря мы проводим с русскоязычным гидом. Это не экскурсия для галочки,
+            а возможность сразу разобраться, как тут всё устроено: почему город стоит на вулканах,
+            кто такие маори и почему их язык здесь второй государственный, как себя вести на левой стороне
+            дороги, где покупать вино и что с ним потом делать на таможне. Дальше мы сами,
+            поэтому все вопросы лучше задать сразу.</p>
+          <div class="shot"><img src="img/m2-auckland2.jpg" alt="Окленд над заливом"></div>
+                    <p class="drive"><b>За рулём:</b> трансфер, сами не за рулём · пешком и на такси.</p>
+<p class="stay"><b>Ночуем:</b> <b>Hotel Britomart</b>, дизайнерский отель в отреставрированном портовом квартале, пешком до воды и ресторанов. Эконом-замена: Sudima Auckland City.</p>
+        </div>
+      </div>
+
+      <div class="stop peak">
+        <div class="day"><div class="d">01.01<br>сб</div><div class="n">03</div></div>
+        <div class="body">
+          <h3>Уаихеке: остров бордоских блендов</h3>
+          <p>Сегодня, 1 января, забираем прокатные машины, в городе они были не нужны. Заезжаем на автомобильный паром, сорок пять минут от Окленда, и дальше по острову
+            катаемся сами. Man O&rsquo;War на восточной оконечности, туда ведёт гравийка через холмы и лес,
+            и там единственная на острове дегустационная прямо на пляже. На Уаихеке теплее, чем
+            на материке, поэтому тут вызревают каберне и мерло, из которых делают бордоские бленды,
+            то есть вина в стиле Бордо. Их Larose считается главным красным такого типа в стране.</p>
+          <p>Это единственный день, когда можно по-настоящему искупаться в море. Вода в январе около двадцати
+            одного градуса, пляжи песчаные: Онетанги длинный и открытый, Палм-Бич это тихая бухта
+            с яхтами на якоре. Купальники в ручную кладь.</p>
+          <div class="shot"><img src="img/m2-waiheke.jpg" alt="Виноградники Уаихеке над океаном"></div>
+                    <p class="drive"><b>За рулём:</b> автопаром и разъезды по острову.</p>
+<p class="stay"><b>Ночуем:</b> <b>Hotel Britomart</b>, тот же отель, не переезжаем. Всего в Окленде три ночи подряд: заселяемся 30 декабря, съезжаем утром 2 января.</p>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="day"><div class="d">02.01<br>вс</div><div class="n">04</div></div>
+        <div class="body">
+          <h3>Вайтомо и Хоббитон</h3>
+          <p>Вайтомо это известняковые пещеры, где на потолке живут личинки грибного комарика:
+            они светятся голубым, чтобы приманить добычу. Садишься в лодку, свет гасят, и над головой
+            оказывается звёздное небо из тысяч огоньков. Дальше Хоббитон: декорацию Шира построили
+            для Питера Джексона прямо на действующей овечьей ферме и после съёмок не стали разбирать.
+            Сорок четыре норы, огороды, бельё на верёвках и паб «Зелёный дракон» с собственным пивом.</p>
+          <p>Отдельно повезло со временем: в 2026 году сюда вернулась съёмочная группа, снимали новый
+            фильм по Толкину, «Охота на Голлума». Он выходит на экраны <b>17 декабря 2027 года</b>,
+            за одиннадцать дней до нашего вылета. То есть мы придём в декорации, которые вся планета
+            только что увидела заново.</p>
+          <div class="duo">
+            <img src="img/mx-glowworm.jpg" alt="Лодка в пещере светлячков Вайтомо">
+            <img src="img/m2-hobbiton.jpg" alt="Норы хоббитов в Шире">
+          </div>
+                    <p class="drive"><b>За рулём:</b> 375 км, около 5 ч.</p>
+<p class="stay"><b>Ночуем:</b> <b>Regent of Rotorua</b>, бутик-отель в духе шестидесятых. Открытый подогреваемый бассейн на 28 градусов и закрытый геотермальный на 39, вода своя, из-под земли. Эконом-замена: Sudima Rotorua.</p>
+        </div>
+      </div>
+
+      <div class="stop peak">
+        <div class="day"><div class="d">03.01<br>пн</div><div class="n">05</div></div>
+        <div class="body">
+          <h3>Роторуа: маори и кипящая земля</h3>
+          <p>Роторуа стоит прямо на геотермальном поле: из трещин в земле бьёт пар, булькают грязевые
+            котлы, и весь город пахнет сероводородом, к чему привыкаешь примерно за час. Гейзер Похуту
+            выстреливает на тридцать метров по нескольку раз в день. В Вай-О-Тапу Шампанское озеро,
+            оранжевое по краям от соединений мышьяка и сурьмы. Вечером едем к маори, коренному народу
+            страны: хака, боевой танец с криком и высунутым языком, и хангу, ужин, который несколько часов
+            томился в яме на раскалённых камнях.</p>
+          <div class="duo">
+            <img src="img/m2-geo.jpg" alt="Геотермальное поле Роторуа">
+            <img src="img/m2-haka.jpg" alt="Хака, боевой танец маори">
+          </div>
+                    <p class="drive"><b>За рулём:</b> 60 км по городу и к Вай-О-Тапу.</p>
+<p class="stay"><b>Ночуем:</b> <b>Regent of Rotorua</b>, вторая ночь. Вечером геотермальный бассейн очень кстати после дня на ногах.</p>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="day"><div class="d">04.01<br>вт</div><div class="n">06</div></div>
+        <div class="body">
+          <h3>Напиер <span class="only18">только в полном</span></h3>
+          <p>В 1931 году Напиер за две с половиной минуты разрушило землетрясением. Отстраивали сразу
+            и в тогдашней моде, поэтому получился целый город в стиле ар-деко: пастельные фасады,
+            строгая геометрия, зигзаги и солнца над входами. Такой сплошной застройки одной эпохи
+            больше нет нигде в мире. Вечером гуляем по набережной Марин-Парейд. Именно гуляем: купаться там нельзя, под берегом
+            дно резко уходит вниз и тянет сильное обратное течение, спасатели оттуда ушли на соседний пляж Ахурири.</p>
+          <div class="shot"><img src="img/napier.jpg" alt="Улица Напиера, пастельные фасады ар-деко" style="object-position:center bottom"></div>
+                    <p class="drive"><b>За рулём:</b> 220 км, около 3,5 ч.</p>
+<p class="stay"><b>Ночуем:</b> <b>Art Deco Masonic</b> прямо на Марин-Парейд: живёшь внутри той самой достопримечательности, крыша с видом на океан. В пяти минутах Ocean Spa с подогреваемыми ваннами прямо на набережной.</p>
+        </div>
+      </div>
+
+      <div class="stop peak">
+        <div class="day"><div class="d">05.01<br>ср</div><div class="n">07</div></div>
+        <div class="body">
+          <h3>Хокс-Бей: вино, которое не пино <span class="only18">только в полном</span></h3>
+          <p>Единственный регион страны, где главное не пино нуар. Тут заметно теплее, поэтому вызревают
+            каберне и мерло, те самые сорта, из которых делают красные в Бордо, и сира, главный сорт
+            французской долины Роны (в Австралии его же называют шираз). Сердце региона это
+            Gimblett Gravels: кусок старого речного русла, засыпанный крупной галькой. За день она
+            набирает тепло, ночью отдаёт его лозе, и виноград успевает дозреть. В девяностые этот
+            участок чуть не ушёл под карьер, виноделы перекупили его с торгов. Trinity Hill делает
+            отсюда Homage Syrah, причём из черенков, привезённых с Северной Роны, то есть с родины
+            сорта. Te Mata работает с 1896 года, их Coleraine считается самым уважаемым красным
+            Новой Зеландии. Обедаем в Craggy Range под пиком Те-Мата.</p>
+          <div class="shot"><img src="img/m2-hawkesbay.jpg" alt="Виноградники Хокс-Бей"></div>
+                    <p class="drive"><b>За рулём:</b> 80 км по региону.</p>
+<p class="stay"><b>Ночуем:</b> <b>Art Deco Masonic</b>, вторая ночь.</p>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="day"><div class="d">06.01<br>чт</div><div class="n">08</div></div>
+        <div class="body">
+          <h3>Таупо</h3>
+          <p>Озеро Таупо на самом деле кратер супервулкана размером с Сингапур: его извержение около
+            1800 лет назад было самым мощным на планете за последние пять тысяч лет. Водопад Хука
+            это место, где широкая река Уаикато протискивается в пятнадцатиметровую щель:
+            двести двадцать тысяч литров в секунду. Подходим к нему вплотную на катере.</p>
+          <div class="shot"><img src="img/m2-huka.jpg" alt="Водопад Хука" style="object-position:center 8%"></div>
+                    <p class="drive"><b>За рулём:</b> 145 км, около 2 ч.</p>
+<p class="stay"><b>Ночуем:</b> <b>Millennium Manuels</b> на самом берегу озера Таупо. Подогреваемый бассейн, отдельный плунж и сауна. В десяти минутах термальный DeBretts с горячими источниками.</p>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="day"><div class="d">07.01<br>пт</div><div class="n">09</div></div>
+        <div class="body">
+          <h3>Сдаём машину, летим на юг</h3>
+          <p>Возвращаемся в Окленд и сдаём машину прямо в аэропорту, оттуда и летим. Два часа лёта через всю страну,
+            и вечером мы уже в Квинстауне, под горой Боба и над озером Вакатипу. Там снова берём машины.</p>
+          <div class="shot"><img src="img/m2-plane.jpg" alt="Самолёт Air New Zealand" style="object-position:center 46%"></div>
+                    <p class="drive"><b>За рулём:</b> 270 км и перелёт на юг.</p>
+<p class="stay"><b>Ночуем:</b> <b>Hotel St Moritz</b> над озером Вакатипу. Два спа-бассейна на крыше с видом на горы и сауна. Эконом-замена: Copthorne Lakefront.</p>
+        </div>
+      </div>
+
+      <div class="stop peak">
+        <div class="day"><div class="d">08&ndash;10.01<br>сб&ndash;пн</div><div class="n">10&ndash;12</div></div>
+        <div class="body">
+          <h3>Ванака: три ночи, и мы никуда не едем</h3>
+          <p>Это середина маршрута и единственное место, где мы стоим три ночи и при этом никуда не едем: в Окленде ночей тоже три, но там каждый день куда-то выбираемся. Специально
+            не в Квинстауне: там шумно, очереди и цены курорта. Ванака вчетверо меньше, тише
+            и спокойнее, и после восьми дней переездов это именно то, что нужно.</p>
+          <p><b>День 10, 8 января.</b> Переезжаем из Квинстауна через перевал Кроун-Рейндж, самую высокую
+            асфальтовую дорогу страны: семьдесят километров и полтора часа с остановками на смотровых.
+            Заселяемся, и дальше вечер на берегу озера.</p>
+          <p><b>День 11, 9 января.</b> Утром идём в <b>Rippon</b>, семейную винодельню, где лозы террасами
+            спускаются к самой воде. После обеда ничего не запланировано: отель стоит прямо на берегу,
+            так что можно честно не выходить за ворота.</p>
+          <p><b>День 12, 10 января.</b> Полностью свободный день, каждый берёт своё: подъём на <b>Рой-Пик</b>
+            ради вида, который все знают по открыткам, каяк или сапборд по озеру, велосипед вдоль берега,
+            Puzzling World с комнатами-иллюзиями, кофейни и местные пивоварни.</p>
+          <div class="duo">
+            <img src="img/m2-wanakatree.jpg" alt="То самое дерево, растущее прямо из озера Ванака">
+            <img src="img/m2-wanaka.jpg" alt="Вид с Рой-Пик на озеро Ванака">
+          </div>
+                    <p class="drive"><b>За рулём:</b> 70 км, около 1,5 ч.</p>
+<p class="stay"><b>Ночуем:</b> <b>Edgewater</b> на берегу озера Ванака, три ночи подряд. Джакузи с подогревом, сауна, теннис и каяки на берегу. Озеро летом прогревается до 16&ndash;18 и в нём купаются прямо с берега.</p>
+        </div>
+      </div>
+
+      <div class="stop peak">
+        <div class="day"><div class="d">11.01<br>вт</div><div class="n">13</div></div>
+        <div class="body">
+          <h3>Аораки, Маунт-Кук</h3>
+          <p>Дорога идёт вдоль озера Пукаки, вода в нём мутно-бирюзовая из-за ледниковой муки,
+            мельчайшей каменной пыли, которую перетёр ледник. Устраиваем на берегу пикник с видом на гору.
+            Днём идём трек по долине Хукер: ровная тропа, три подвесных моста, три часа в оба конца,
+            в конце озеро с плавающими айсбергами. Желающие улетают на вертолёте с посадкой
+            на леднике Тасмана, это самый длинный ледник страны.</p>
+          <div class="duo">
+            <img src="img/m2-aoraki-hooker.jpg" alt="Тропа по долине Хукер к Аораки" style="object-position:center 30%">
+            <img src="img/kea.jpg" alt="Кеа, горный попугай">
+          </div>
+                    <p class="drive"><b>За рулём:</b> 210 км, около 3 ч.</p>
+<p class="stay"><b>Ночуем:</b> <b>The Hermitage</b> в деревне Маунт-Кук: единственное место, где Аораки видно прямо из окна номера. При отеле планетарий и центр Эдмунда Хиллари. Эконом-замена: Aoraki Court Motel.</p>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="day"><div class="d">12.01<br>ср</div><div class="n">14</div></div>
+        <div class="body">
+          <h3>Текапо и тёмное небо</h3>
+          <p>Вода в Текапо такого же невозможного бирюзового цвета, а в январе вдоль берега цветут
+            люпины: сиреневые и розовые поля до самой воды. Их никто не высаживал. В конце сороковых
+            жена местного фермера разбросала семена вдоль дороги, они одичали и разошлись по всей
+            долине. Теперь это главная открытка Новой Зеландии, хотя формально люпин тут числится
+            сорняком. На мысу стоит каменная церковь Доброго Пастыря 1935 года. Витража в ней нет:
+            за алтарём обычное прозрачное окно, и вместо иконы в нём озеро и Южные Альпы. Ночью
+            поднимаемся в обсерваторию на горе Джон, ту самую, откуда астрономы ищут планеты
+            у чужих звёзд.</p>
+          <div class="shot"><img src="img/mx-tekaponight.jpg" alt="Млечный Путь над церковью Доброго Пастыря"></div>
+                    <p class="drive"><b>За рулём:</b> 105 км, около 1,5 ч.</p>
+<p class="stay"><b>Ночуем:</b> <b>Peppers Bluewater</b> в пяти минутах от озера и церкви. В полутора километрах Tekapo Springs, горячие ванны под открытым небом. Удобно сходить перед обсерваторией, пока ждём темноты.</p>
+        </div>
+      </div>
+
+      <div class="stop peak">
+        <div class="day"><div class="d">13.01<br>чт</div><div class="n">15</div></div>
+        <div class="body">
+          <h3>Центральное Отаго: главный винный день</h3>
+          <p>Центральное Отаго это горная пустыня: днём жара, ночью холод. От такого перепада виноград
+            набирает плотность и не теряет кислотность, поэтому здешний пино выходит густым и свежим
+            одновременно. Виноделие здесь началось с нуля в восьмидесятых, а сейчас эти вина ставят рядом
+            с бургундскими.</p>
+          <p>Как проходит день. Утром едем в Банноберн, в Felton Road. Виноградник заложили в 1991 году,
+            а с начала двухтысячных ведут его по биодинамике: без химии, на компосте, со сверкой работ
+            по календарю. Звучит чудаковато, но винодельню дважды называли лучшей в стране. Визит на два
+            часа: сначала идём по участкам и смотрим, чем отличается земля на соседних склонах, потом
+            садимся и пробуем всю линейку подряд. После обеда Гибстон. В Kinross за один заход пробуешь
+            пятерых небольших виноделов, по паре вин у каждого, а в Gibbston Valley спускаешься в погреб,
+            вырубленный прямо в скале, единственный такой в регионе. Дегустации в этот день, как и в остальные винные дни, оплачиваются отдельно:
+            пьют не все. Кто захочет ещё одну сверх программы, это 25 €.</p>
+          <div class="shot"><img src="img/m2-otago.jpg" alt="Ряды лозы в Центральном Отаго"></div>
+                    <p class="drive"><b>За рулём:</b> 260 км, около 3,5 ч.</p>
+<p class="stay"><b>Ночуем:</b> <b>Hotel St Moritz</b>, снова Квинстаун.</p>
+        </div>
+      </div>
+
+      <div class="stop peak">
+        <div class="day"><div class="d">14.01<br>пт</div><div class="n">16</div></div>
+        <div class="body">
+          <h3>Даутфул-Саунд</h3>
+          <p>Дороги в Даутфул нет вообще, поэтому добираемся в три приёма. Сначала катер
+            через озеро Манапоури, минут сорок. Потом автобус по грунтовке через перевал Уилмот,
+            двадцать два километра и час пути. И только на том берегу, у воды, нас ждёт корабль,
+            на котором мы и выходим в сам фьорд. Отвесные стены уходят
+            на километр вверх прямо из воды, на камнях лежат морские котики, в заливе живёт постоянная
+            стая примерно из шестидесяти дельфинов-афалин. В полном варианте мы тут
+            ночуем на борту: каяки, купание, ужин и полная тишина, какой в городе не бывает.
+            В коротком варианте это длинный дневной круиз с возвратом в Квинстаун.</p>
+          <p><b>Почему именно этот фьорд.</b> Судоходных фьордов в Фьордленде два. В соседний ведёт
+            асфальтовая дорога: туда каждый день приезжают сотни автобусов, по воде одновременно идут
+            десятки судов, и пройти его можно за два часа. В наш дороги нет вообще, поэтому за день
+            сюда заходит несколько судов на весь фьорд, а площадью он больше соседнего в десять раз.
+            И мы в нём остаёмся на ночь, а не проходим насквозь.</p>
+          <p><b>Кто живёт во фьорде.</b> Морские котики лежат на камнях почти в каждый рейс, их увидим
+            почти наверняка. Дельфины-афалины живут здесь постоянно, и лето это как раз пик встреч,
+            но по расписанию они не приплывают. С пингвинами интереснее: малый голубой живёт тут
+            круглый год, и чаще всего его видят в сумерках с тех судов, что остаются на ночь, то есть
+            ровно в нашем длинном варианте. А фьордлендский хохлатый с середины января линяет и в это
+            время сидит на прибрежных камнях, не уходя в море. Мы приходим 14 января, прямо в начало
+            этого окна. Шанс есть, обещать не буду.</p>
+          <div class="shot">
+            <img src="img/m2-fiord.jpg" alt="Корабль под стенами Даутфул-Саунда">
+          </div>
+                    <p class="drive"><b>За рулём:</b> 175 км, около 2,5 ч.</p>
+<p class="stay"><b>Ночуем:</b> <b>Каюта на борту Fiordland Navigator</b> посреди фьорда. В коротком варианте вместо этого ещё одна ночь в Квинстауне.</p>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="day"><div class="d">15&ndash;16.01<br>сб&ndash;вс</div><div class="n">17&ndash;18</div></div>
+        <div class="body">
+          <h3>Гленорчи и последний рывок <span class="only18">только в полном</span></h3>
+          <p>Возвращаемся из фьорда, день в Квинстауне. Дальше дорога на Гленорчи вдоль озера Вакатипу,
+            её регулярно называют красивейшей в стране. В долине Парадайз за ней снимали Лотлориэн и Изенгард из «Властелина колец», и там же до сих пор нет ничего, кроме бродов и грунтовок, поэтому едем на джипах.
+            Днём джетбот по каньону Шотовер: специальная лодка с водомётом идёт по мелкой воде
+            в метре от скал и разворачивается на месте. Вечером большой ужин в старательском Эрроутауне,
+            который вырос во время золотой лихорадки 1860-х.</p>
+          <div class="duo">
+            <img src="img/m2-glenorchy.jpg" alt="Гленорчи в вершине озера Вакатипу">
+            <img src="img/m2-sheep.jpg" alt="Гора Эрнсло над долиной Парадайз">
+          </div>
+                    <p class="drive"><b>За рулём:</b> 175 км, около 2,5 ч · 95 км, около 1,5 ч.</p>
+<p class="stay"><b>Ночуем:</b> <b>Hotel St Moritz</b>, последние две ночи в Квинстауне.</p>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="day"><div class="d">17.01<br>пн</div><div class="n">19</div></div>
+        <div class="body">
+          <h3>Домой</h3>
+          <p>Сдаём машину в Квинстауне, перелёт в Окленд и дальше домой через Шанхай.
+            В Москве мы 18 января. В коротком варианте этот день наступает 13 января,
+            и дома мы 14-го.</p>
+                  <p class="drive"><b>За рулём:</b> трансфер, сами не за рулём.</p>
+</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<figure class="plate">
+  <img src="img/m2-tasting.jpg" alt="Дегустация на винодельне" style="object-position:center 48%">
+  <figcaption><div class="wrap">
+    <div class="cap-k">Три дня, три школы</div>
+    <div class="cap-t">Вино</div>
+    <div class="cap-s">Бордоские бленды Уаихеке, сира из ронских черенков в Хокс-Бей и пино нуар Центрального Отаго.</div>
+  </div></figcaption>
+</figure>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Винная часть</span>
+      <h2>Куда именно мы идём и почему туда</h2>
+      <p class="lede">Это не «заедем на винодельню по пути». Три отдельных дня, в каждом свой регион,
+        и в каждом есть на что потратить день целиком.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="img/m2-vineyard.jpg" alt="Виноградники Уаихеке">
+        <div class="pad">
+          <span class="meta">День 3 &middot; Уаихеке</span>
+          <h3>Бордоские бленды</h3>
+          <p>Бордоский бленд это вино из нескольких сортов сразу, прежде всего каберне и мерло,
+            как делают в Бордо. <b>Man O&rsquo;War</b>: пять тысяч акров фермы у океана и единственная
+            на острове дегустационная прямо на пляже, ехать туда гравийкой через холмы.
+            У <b>Stonyridge</b> пробуем <b>Larose</b>, его называют главным вином этого типа в стране.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/m2-cellar.jpg" alt="Дегустация в погребе">
+        <div class="pad">
+          <span class="meta">День 7 &middot; Хокс-Бей</span>
+          <h3>Сира с Северной Роны</h3>
+          <p>Сира это сорт из французской долины Роны, тот же, что в Австралии зовут шираз.
+            <b>Trinity Hill</b> растит его на Gimblett Gravels, галечном русле древней реки,
+            из черенков с родины сорта, и делает <b>Homage Syrah</b>. <b>Te Mata</b> работает
+            с 1896 года, их <b>Coleraine</b> называют самым уважаемым красным страны.
+            Обедаем в <b>Craggy Range</b> под пиком Те-Мата.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/m2-pino.jpg" alt="Виноградники Центрального Отаго">
+        <div class="pad">
+          <span class="meta">День 15 &middot; Центральное Отаго</span>
+          <h3>Самый южный пино мира</h3>
+          <p>Пино нуар самый капризный сорт винограда: он удаётся только там, где днём тепло, а ночью холодно.
+            Южнее Отаго вино в мире не делают нигде. <b>Felton Road</b> в Банноберне дважды называли
+            винодельней года страны, виноградник ведут без химии, визит на два часа с прогулкой
+            по участкам. В <b>Kinross</b> за один заход пробуешь пятерых небольших виноделов,
+            включая <b>Valli</b>. В <b>Gibbston Valley</b> спускаешься в погреб, вырубленный в скале,
+            единственный такой в регионе.</p>
+        </div>
+      </div>
+    </div>
+    <p class="note">Плюс <b>Rippon</b> в Ванаке в день отдыха: биодинамика, террасы спускаются прямо в озеро.
+      Felton Road принимает только по записи и только по будням, поэтому винный день стоит в четверг.
+      Сами дегустации оплачиваются отдельно: пьют не все, и платить за них всем было бы нечестно.</p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Адреналин</span>
+      <h2>Квинстаун, мировая столица прыжков</h2>
+      <p class="lede">Всё, что ниже, берётся по желанию и оплачивается отдельно, цены указаны.
+        Исключение одно: джетбот по Шотоверу в полном варианте уже входит в стоимость тура,
+        отдельно его оплачивают только в коротком варианте. Никто никого не заставляет, но если лететь
+        на другой конец света, то вот ровно за этим.</p>
+    </div>
+    <div class="cards four">
+      <div class="card">
+        <img src="img/mx-bungy.jpg" alt="Прыжок с моста Каварау">
+        <div class="pad">
+          <span class="meta">День 15 &middot; 43 метра</span>
+          <h3>Банджи Каварау</h3>
+          <p>То самое место: именно здесь в 1988 году придумали коммерческий банджи-джампинг.
+            Есть вариант с касанием воды.</p>
+          <span class="price">130 &euro;</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/jetboat.jpg" alt="Джетбот по каньону Шотовер">
+        <div class="pad">
+          <span class="meta">День 18 &middot; 25 минут</span>
+          <h3>Джетбот Шотовер</h3>
+          <p>Восемьдесят пять километров в час в метре от отвесных скал, развороты на 360 градусов
+            прямо в каньоне. Двадцать пять минут, которые помнишь годами.</p>
+          <span class="price">входит в полный<small> &middot; в коротком 90 &euro;</small></span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/mx-paraglide.jpg" alt="Параплан над Квинстауном">
+        <div class="pad">
+          <span class="meta">Квинстаун &middot; дни 15, 17&ndash;18</span>
+          <h3>Параплан</h3>
+          <p>Стартуешь от верхней станции канатки и минут десять идёшь по спирали над городом,
+            озером и грядой Ремаркаблс. Пилот за спиной, от тебя ничего не требуется.</p>
+          <span class="price">140 &euro;</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/heli-glacier.jpg" alt="Вертолёт с группой на леднике под Аораки">
+        <div class="pad">
+          <span class="meta">День 13 &middot; Маунт-Кук</span>
+          <h3>Вертолёт на ледник</h3>
+          <p>Двадцать пять минут над Южными Альпами с посадкой прямо на леднике Тасмана.
+            Есть комбо: вверх на ski plane, вниз на вертолёте.</p>
+          <span class="price">195 &euro;</span>
+        </div>
+      </div>
+    </div>
+    <p class="note">Это четыре самых заметных. Полный список с ценами и днями ниже, в разделе про деньги.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Где живём</span>
+      <h2>Отели с видами и завтраками</h2>
+      <p class="lede">Никаких придорожных мотелей ради экономии. Два уровня на выбор: характерные отели
+        четыре-пять звёзд или та же география, но спокойнее по деньгам. В базовой линейке завтраки везде.</p>
+    </div>
+    <div class="split">
+      <div class="rows">
+        <div class="rowi"><div class="t"><b>Окленд</b>, 3 ночи<small>Hotel Britomart 5★, дизайнерский, прямо на набережной Бритомарт</small></div><div class="v">320 &euro;</div></div>
+        <div class="rowi"><div class="t"><b>Роторуа</b>, 2 ночи<small>Regent of Rotorua, бутик в духе шестидесятых, бассейн</small></div><div class="v">185 &euro;</div></div>
+        <div class="rowi"><div class="t"><b>Напиер</b>, 2 ночи <span class="only18">только в полном</span><small>Masonic Hotel, ар-деко прямо на Марин-Парейд, живёшь внутри достопримечательности</small></div><div class="v">180 &euro;</div></div>
+        <div class="rowi"><div class="t"><b>Таупо</b>, 1 ночь<small>Millennium Hotel Taupo, вид на озеро</small></div><div class="v">240 &euro;</div></div>
+        <div class="rowi"><div class="t"><b>Ванака</b>, 3 ночи<small>Edgewater, прямо на берегу озера, это блок отдыха</small></div><div class="v">250 &euro;</div></div>
+        <div class="rowi"><div class="t"><b>Маунт-Кук</b>, 1 ночь<small>The Hermitage, вид на Аораки из окна, в деревне всего три отеля</small></div><div class="v">250 &euro;</div></div>
+        <div class="rowi"><div class="t"><b>Текапо</b>, 1 ночь<small>Peppers Bluewater, вид на озеро, пять минут до обсерватории</small></div><div class="v">250 &euro;</div></div>
+        <div class="rowi"><div class="t"><b>Квинстаун</b>, 4 ночи в полном, 3 в коротком<small>Hotel St Moritz, номера с видом на Вакатипу, в центре</small></div><div class="v">330 &euro;</div></div><div class="rowi"><div class="t"><b>Даутфул-Саунд</b>, 1 ночь <span class="only18">только в полном</span><small>Каюта на борту Fiordland Navigator, входит в цену круиза</small></div><div class="v">в цене</div></div>
+      </div>
+      <div class="stackpix">
+        <img src="img/m2-hotel.jpg" alt="Лодж с видом на горы">
+        <img src="img/m2-hotel2.jpg" alt="Квинстаун, отели над озером Вакатипу">
+      </div>
+    </div>
+    <p class="note"><b>Чем варианты отличаются по ночам.</b> В полном 18 ночей, в коротком 14. Выпадают две ночи
+      в Напиере с его ар-деко и ночь на борту во фьорде: вместо неё в коротком добавляется ещё одна ночь
+      в Квинстауне, потому что Даутфул идёт дневным круизом. Остальные отели и число ночей в них одинаковые.</p>
+    <p class="note">Цены за двухместный номер за ночь. Эконом-линейка в тех же городах дешевле почти
+      на треть: получается минус 74&ndash;92 тысяч рублей с человека за поездку, смотря по варианту
+      и размеру группы. Завтраки в ней тоже есть, кроме Маунт-Кука и Текапо: в этой нише их не дают,
+      зато в номере кухня. Выбираем вместе.</p>
+    <p class="note">Конкретные отели пока ориентир, а не бронь. В Ванаке, Маунт-Куке и Текапо посёлки
+      крошечные, номеров мало, и места разбирают почти за год. Если что-то не достанется, меняем
+      на равноценное в том же месте и с тем же видом, а разницу в цене пересчитываем открыто.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">На чём едем</span>
+      <h2>Сами за рулём, и это часть удовольствия</h2>
+    </div>
+    <div class="split">
+      <img src="img/m2-road.jpg" alt="Машина на дороге вдоль озера">
+      <div class="rows">
+        <div class="rowi"><div class="t"><b>Шестеро</b><small>один минивэн Toyota Hiace или Hyundai Staria на 8 мест: шесть человек и багаж на свободных местах</small></div><div class="v">1 машина</div></div>
+        <div class="rowi"><div class="t"><b>Восьмеро</b><small>два кроссовера Toyota RAV4 или Mitsubishi Outlander, по четверо в каждом, багажники не забиты</small></div><div class="v">2 машины</div></div>
+        <div class="rowi"><div class="t"><b>Десять и двенадцать</b><small>два минивэна на 8 мест</small></div><div class="v">2 машины</div></div>
+        <div class="rowi"><div class="t">Полное страховое покрытие<small>ноль ответственности, берём у локальных прокатчиков, они дешевле международных</small></div><div class="v">включено</div></div>
+        <div class="rowi"><div class="t">Топливо<small>до 2 100 км за поездку</small></div><div class="v">включено</div></div>
+      </div>
+    </div>
+    <p class="note">⚠️ Движение левостороннее. На Южном острове дороги горные и однополосные мосты,
+      средняя скорость заметно ниже, чем кажется по карте. Водителей назначим заранее,
+      первый день за рулём сделаем лёгким.</p>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Два варианта</span>
+      <h2>Пятнадцать дней или девятнадцать</h2>
+      <p class="lede">Маршрут один и тот же. Длинный добавляет четыре дня и то, что в короткий не влезает.</p>
+    </div>
+    <div class="formats">
+      <div class="fmt">
+        <span class="tag">15 дней &middot; вылет из Москвы 28.12, дома 14.01</span>
+        <h3>Короткий</h3>
+        <p>Полный маршрут по обоим островам: пещеры со светлячками и Хоббитон, гейзеры и ужин хангу
+          у маори, водопад Хука, Аораки, звёзды Текапо и фьорд.</p>
+        <ul>
+          <li><b>Оба острова</b> и перелёт между ними: вулканы и гейзеры на севере, Альпы и фьорд на юге</li>
+          <li><b>Два винных дня</b>: бордоские бленды Уаихеке и пино Центрального Отаго</li>
+          <li><b>Три ночи в Ванаке</b> без переездов, ровно в середине маршрута</li>
+          <li><b>Даутфул-Саунд</b> длинным дневным круизом</li>
+        </ul>
+      </div>
+      <div class="fmt pick">
+        <span class="tag">19 дней &middot; вылет из Москвы 28.12, дома 18.01</span>
+        <h3>Полный</h3>
+        <p>Всё то же плюс четыре дня, за которые появляется то, ради чего многие и едут.</p>
+        <ul>
+          <li><b>Ночь на борту в Даутфул-Саунде</b>: каяки, купание, ужин, тишина посреди фьорда и шанс увидеть пингвинов в сумерках, которого у дневных судов нет</li>
+          <li><b>Напиер и Хокс-Бей</b>: город целиком в ар-деко и третий винный день</li>
+          <li><b>Гленорчи</b>: долина Парадайз на джипах, броды и Средиземье</li>
+          <li><b>Джетбот Шотовер</b>, 85 км/ч в метре от скал</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Деньги</span>
+      <h2>Чем нас больше, тем дешевле каждому</h2>
+      <p class="lede">Машины, топливо и всё, что считается на группу, делятся на всех,
+        поэтому каждый новый человек удешевляет поездку остальным.
+        Смета открытая, покажу по запросу.</p>
+    </div>
+
+    <div class="pricewrap">
+      <table>
+        <caption>Цена тура &middot; короткий, 30 декабря &ndash; 13 января</caption>
+        <thead><tr><th>Размер группы</th><th>Отели 4&ndash;5&#9733;</th><th>Эконом-отели</th></tr></thead>
+        <tbody>
+          <tr><td>6 человек</td><td>5 660 &euro;</td><td>4 800 &euro;</td></tr>
+          <tr class="best"><td><b>8 человек</b></td><td>5 150 &euro;</td><td>4 340 &euro;</td></tr>
+          <tr class="best"><td><b>10 человек</b></td><td>4 940 &euro;</td><td>4 150 &euro;</td></tr>
+          <tr><td>12 человек</td><td>4 650 &euro;</td><td>3 870 &euro;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pricewrap" style="margin-top:34px">
+      <table>
+        <caption>Цена тура &middot; полный, 30 декабря &ndash; 17 января</caption>
+        <thead><tr><th>Размер группы</th><th>Отели 4&ndash;5&#9733;</th><th>Эконом-отели</th></tr></thead>
+        <tbody>
+          <tr><td>6 человек</td><td>7 420 &euro;</td><td>6 450 &euro;</td></tr>
+          <tr class="best"><td><b>8 человек</b></td><td>6 810 &euro;</td><td>5 890 &euro;</td></tr>
+          <tr class="best"><td><b>10 человек</b></td><td>6 570 &euro;</td><td>5 670 &euro;</td></tr>
+          <tr><td>12 человек</td><td>6 210 &euro;</td><td>5 330 &euro;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Тарифов на январь 2028 пока нет нигде, всё посчитано по ценам 2026 года и будет уточнено ближе к делу.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="incl">
+      <div class="yes">
+        <h3>Входит в цену тура</h3>
+        <ul>
+          <li>Ночи в отелях с завтраками: дизайнерский Окленд, бутик в Роторуа, ар-деко в Напиере, отели с видом на озеро в Таупо, Ванаке, Текапо и Квинстауне, лодж под Аораки</li>
+          <li>Машины на оба острова, топливо и полное страховое покрытие</li>
+          <li>Трансфер из аэропорта в день прилёта. Машины берём со второго января, в городе они не нужны. Автомобильный паром на Уаихеке тоже в цене</li>
+          <li>Все входные билеты по программе: Вайтомо, Хоббитон, Те Пуйя, Вай-О-Тапу, катер к водопаду Хука, ар-деко тур в Напиере, обсерватория Маунт-Джон, канатка в Квинстауне, круиз по Даутфул-Саунду. В полном варианте ещё джетбот Шотовер и джипы в Гленорчи</li>
+          <li>Русскоязычный гид на обзорную 31 декабря, гид-маори и ужин хангу в Роторуа</li>
+          <li>Аптечка на группу и я на все дни</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3>Сверх цены тура</h3>
+        <table class="extras">
+          <tbody>
+            <tr><td>Перелёт из Москвы и обратно</td><td>1 560 &euro;</td></tr>
+            <tr><td>Внутренний перелёт Окленд &ndash; Квинстаун</td><td>162 &euro;</td></tr>
+            <tr><td>Виза Новой Зеландии и расширенная страховка</td><td>380 &euro;</td></tr>
+            <tr><td>Местная симка с интернетом</td><td>30 &euro;</td></tr>
+            <tr><td>Дегустации на винодельнях, платит тот, кто пьёт</td><td>95&ndash;140 &euro;</td></tr>
+            <tr><td>Еда, 65 &euro; в день, вместе с приветственным и финальным ужинами</td><td>1 110&ndash;1 370 &euro;</td></tr>
+            <tr><td>Обеды на винодельнях</td><td>120&ndash;180 &euro;</td></tr>
+            <tr><td>Пикники в пути</td><td>20&ndash;40 &euro;</td></tr>
+            <tr class="sum"><td><b>Итого сверх тура</b></td><td><b>3 477&ndash;3 862 &euro;</b></td></tr>
+          </tbody>
+        </table>
+        <p class="note" style="margin-top:14px">Оба перелёта, виза, страховка и симка это точные суммы, их платит каждый сам. Билеты на внутренний перелёт беру одним заказом на всю группу, чтобы летели одним рейсом, каждый возвращает свои. Еда, обеды на винодельнях и пикники посчитаны по сегодняшним ценам и зависят от аппетита, поэтому вилкой.</p>
+        <p class="note" style="margin-top:14px">При группе в 10 человек и экономных отелях полный трип выходит около <b>9 530 евро</b> на человека со всем, короткий около <b>7 620</b>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">По желанию</span>
+      <h2>Что можно добрать за свои</h2>
+      <p class="lede">Это не входит ни в тур, ни в то, что идёт сверх него. Суммировать смысла нет,
+        набор у всех свой. Список идёт по порядку дней.</p>
+    </div>
+    <div class="pricewrap">
+      <table class="opt">
+        <thead><tr><th>День</th><th>Что</th><th>Цена</th></tr></thead>
+        <tbody>
+          <tr><td class="od">3</td><td>Дегустация сверх программы на Уаихеке</td><td>25 &euro;</td></tr>
+          <tr><td class="od">4</td><td>Хоббитон: вечерний банкет вместо обычного тура</td><td>65 &euro;</td></tr>
+          <tr class="only18row"><td class="od">7</td><td>Дегустация сверх программы в Хокс-Бей <span class="only18">только в полном</span></td><td>25 &euro;</td></tr>
+          <tr><td class="od">11&ndash;12</td><td>Подъём на Рой-Пик в Ванаке, шесть часов</td><td>бесплатно</td></tr>
+          <tr><td class="od">13</td><td>Вертолёт с посадкой на леднике Тасмана, 25 минут</td><td>195 &euro;</td></tr>
+          <tr><td class="od">13</td><td>Ski plane и вертолёт, комбо 45 минут</td><td>275 &euro;</td></tr>
+          <tr><td class="od">15</td><td>Банджи с моста Каварау, 43 м, по дороге в Гибстон</td><td>130 &euro;</td></tr>
+          <tr><td class="od">15</td><td>Дегустация сверх программы в Центральном Отаго</td><td>25 &euro;</td></tr>
+          <tr><td class="od">15, 17&ndash;18</td><td>Банджи Nevis, 134 м, из Квинстауна</td><td>200 &euro;</td></tr>
+          <tr><td class="od">15, 17&ndash;18</td><td>Прыжок с парашютом, 15 000 футов</td><td>215 &euro;</td></tr>
+          <tr><td class="od">15, 17&ndash;18</td><td>Параплан с горы Боба</td><td>140 &euro;</td></tr>
+          <tr class="only18row"><td class="od">18</td><td>Джетбот Шотовер <span class="only18">в полном уже в цене</span></td><td>90 &euro;</td></tr>
+          <tr><td class="od">весь трип</td><td>Доплата за одноместное размещение</td><td>1 980 &ndash; 2 320 &euro;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Оранжевым отмечено то, что доступно только в полном варианте.
+      Комбо-пакеты на несколько активностей в Квинстауне дают до 25% скидки: если берёте
+      две-три штуки, скажите заранее, возьмём пакетом. Вино домой: таможня пропускает
+      3 литра беспошлинно, до 5 литров с пошлиной.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Погода и вода</span>
+      <h2>Январь: солнце, дождь и где купаться</h2>
+    </div>
+    <ul class="why">
+      <li>
+        <span class="fig">22&ndash;25&deg;<small>днём в январе</small></span>
+        <div>
+          <h3>Лето в самом разгаре</h3>
+          <p>Днём на обоих островах 22&ndash;25 градусов, у Аораки прохладнее, около 19. А ночи в Ванаке,
+            Текапо и Маунт-Куке холодные, 8&ndash;12 градусов, так что свитер нужен даже в январе.</p>
+        </div>
+      </li>
+      <li>
+        <span class="fig">12<small>индекс УФ</small></span>
+        <div>
+          <h3>Солнце здесь злое</h3>
+          <p>Над Новой Зеландией тонкий озоновый слой и очень чистый воздух, поэтому ультрафиолет летом
+            один из самых сильных на планете. Сгореть можно минут за пятнадцать. Крем, шляпа и очки нужны
+            всерьёз, а не для галочки.</p>
+        </div>
+      </li>
+      <li>
+        <span class="fig">21:30<small>закат на юге</small></span>
+        <div>
+          <h3>День очень длинный</h3>
+          <p>На Южном острове в январе темнеет только к половине десятого вечера, а сумерки тянутся
+            до одиннадцати. Поэтому в один день помещается и переезд, и трек, и винодельня. Обратная
+            сторона: звёзд в Текапо ждём почти до полуночи.</p>
+        </div>
+      </li>
+      <li>
+        <span class="fig">6 м<small>дождя во фьорде за год</small></span>
+        <div>
+          <h3>Где-то сухо, где-то наоборот</h3>
+          <p>Центральное Отаго это полупустыня, там почти всегда ясно. Фьордленд наоборот, одно
+            из самых дождливых мест планеты. Но дождь там картинку не портит, а делает: на стенах
+            фьорда включаются сотни водопадов.</p>
+        </div>
+      </li>
+      <li>
+        <span class="fig">20&deg;<small>море на Уаихеке</small></span>
+        <div>
+          <h3>Где купаться и загорать</h3>
+          <p>Настоящее море на маршруте одно: Уаихеке в третий день, 1 января. Плюс городские пляжи Окленда в первые два дня, если захочется. В январе вода там около двадцати одного
+            градуса, купальный сезон с декабря по апрель, пляжи песчаные. В Напиере купаться нельзя,
+            и это не осторожность: на Марин-Парейд крупная галька, дно сразу уходит вниз и тянет сильное обратное
+            течение, спасатели оттуда вообще ушли на соседний Ахурири. Гуляем там по набережной, плаваем
+            на Уаихеке. Горные озёра холоднее: Ванака и Текапо прогреваются до 16&ndash;18, а Вакатипу
+            в Квинстауне остаётся ледяным круглый год.</p>
+          <p>Горячие источники по дороге встречаются постоянно: Полинезийский спа в Роторуа прямо на берегу озера, DeBretts в Таупо, Tekapo Springs с видом на горы. Про каждый отель и что в нём есть написано в программе по дням.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">Честно о сложностях</span>
+      <h2>Что нужно знать до того, как сказать «я в деле»</h2>
+    </div>
+    <div class="warn">
+      <p><b>Собираемся сильно заранее.</b> Январь там это разгар лета и школьные каникулы.
+        Места на ночной круиз по Даутфулу и жильё в Ванаке, Маунт-Куке и Текапо разбирают почти за год.
+        Поэтому состав группы хорошо бы знать уже в начале 2027: тогда мы берём лучшие лоджи и каюты
+        по нормальной цене, а не остатки по двойной.</p>
+      <p><b>Виза небыстрая.</b> Упрощённый въезд на наши паспорта не работает, нужна полноценная гостевая виза.
+        Подаём онлайн, биометрию сдавать не надо, но сбор проходит только картой зарубежного банка.
+        Подача к маю 2027.</p>
+      <p><b>Лететь долго.</b> Около полутора суток в одну сторону с одной пересадкой в Шанхае.
+        Расписание China Eastern по реальному поиску: из Москвы <b>28 декабря в 20:25</b>,
+        в Шанхае 29-го в 10:35, стыковка 13 часов 30 минут, вылет <b>в 00:05</b> и в Окленде
+        <b>30 декабря в 15:45</b>. Обратный путь занимает сутки и шесть часов: вылет
+        <b>17 января</b>, дома <b>18-го</b>. Точное время фиксируется, когда откроются продажи
+        на январь 2028. Маршруты через Австралию не берём: там на наши паспорта нужна отдельная
+        транзитная виза, даже если из самолёта не выходишь.</p>
+      <p><b>Зато полдня в Шанхае бонусом.</b> Пересадка туда длинная, тринадцать с половиной часов,
+        обратно около восьми. Китай даёт нашим паспортам безвизовый транзит, и Шанхай в списке городов,
+        куда пускают без визы, поэтому вместо зала ожидания можно выехать в город. Из аэропорта Пудун
+        до центра двадцать минут: сначала маглев, поезд на магнитной подушке, который проходит
+        тридцать километров за восемь минут, до станции Лунъян-роуд, дальше метро. За половину дня успеваем
+        набережную Бунд, старый квартал Юйюань и ужин с видом на небоскрёбы Пудуна, а в аэропорту стоит
+        быть за три часа до вылета. Багаж по одному билету China Eastern идёт до Окленда сам, забирать
+        в Шанхае не нужно. Правила транзита меняются, перед вылетом проверяем ещё раз.</p>
+      <p><b>Нужно международное водительское удостоверение.</b> Наши права на кириллице, и по новозеландскому
+        закону к ним обязателен IDP, то есть международное удостоверение, либо заверенный английский
+        перевод. Везти надо вместе с оригиналом. Прокатчик без него не отдаст машину, а полиция оформит как вождение
+        без прав, и страховка перестанет работать. Делается в ГИБДД за день, но сделать надо
+        до вылета и каждому, кто сядет за руль.</p>
+      <p><b>Это не отдых на лежаке.</b> Мы сами за рулём, движение левостороннее, на Южном острове дороги
+        горные. Но три дня в середине мы не делаем ничего, и это не для галочки.</p>
+      <p><b>В большую группу пускают не везде.</b> Felton Road, Rippon и самые уютные лоджи принимают
+        по шесть-восемь человек. Если нас двенадцать, часть точек придётся заменить на те, что берут всех.
+        Чем меньше группа, тем камернее трип, но тем он дороже каждому.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">План</span>
+      <h2>Что делаем дальше и когда</h2>
+      <p class="lede">Восемь шагов от «мне интересно» до вылета. У каждого есть дата, к которой
+        что-то нужно сделать: мне, вам или нам вместе.</p>
+    </div>
+    <ol class="steps">
+      <li><span class="s">01</span><div><span class="when">До 1 декабря 2026</span><p>Пишете мне в личку: интересно или нет, пятнадцать дней или девятнадцать, отели получше или подешевле.</p></div></li>
+      <li><span class="s">02</span><div><span class="when">До 1 января 2027</span><p>Фиксируем реальный размер группы и точную цену под него. Дальше она может только упасть, если нас станет больше.</p></div></li>
+      <li><span class="s">03</span><div><span class="when">Январь 2027</span><p>Первый взнос, и он небольшой: бронь места на корабле во фьорде. Это единственное, что нужно оплатить в январе, потому что фьорд разбирают почти за год. В полном варианте это каюта с ночёвкой, оператор берёт депозит при бронировании, ориентировочно 150&ndash;200 &euro; с человека, точную сумму уточняю. В коротком варианте это дневной круиз, там условия мягче.</p></div></li>
+      <li><span class="s">04</span><div><span class="when">До марта 2027</span><p>Бронирую жильё, по возможности тарифами с бесплатной отменой. Билеты каждый покупает сам, как откроются продажи на январь.</p></div></li>
+      <li><span class="s">05</span><div><span class="when">До лета 2027</span><p>Подаёмся на визы. Визу и страховку тоже каждый оформляет на себя.</p></div></li>
+      <li><span class="s">06</span><div><span class="when">Лето и осень 2027</span><p>Ждём решения по визам.</p></div></li>
+      <li><span class="s">07</span><div><span class="when">До 1 сентября 2027</span><p>Доплачиваем фьорд до полной суммы: у оператора крайний срок за 120 дней до отхода. Касается тех, кто идёт полным вариантом с ночёвкой на борту.</p></div></li>
+      <li><span class="s">08</span><div><span class="when">До 1 октября 2027</span><p>Остальной бюджет. Можно частями, в удобном каждому ритме.</p></div></li>
+    </ol>
+    <p class="note"><b>Про деньги отдельно.</b> Билеты, визу и страховку каждый покупает на себя сам, через меня идёт только наземная часть. Всю сумму разом отдавать не нужно. От первого разговора
+      до вылета больше года, и собирать можно частями в любом темпе: кому-то удобнее равными долями каждый
+      месяц, кому-то двумя-тремя заходами. С каждым договоримся отдельно. Важно только, чтобы к октябрю
+      2027 всё было собрано, потому что в этот момент закрываются брони.</p>
+    <p class="note">Если по датам или деньгам не складывается, скажите сразу, а не через полгода.
+      Чем раньше понятен состав, тем дешевле выходит всем.</p>
+    <div class="joinbox">
+      <div class="jt"><b>Чат поездки</b><span>Заходите: там обсуждаем даты, состав и детали,
+        туда же приходят все обновления по программе и ценам.</span></div>
+      <a class="tglink" href="https://t.me/+La_7w6y0A0BiMzYy" target="_blank" rel="noopener">Вступить в чат</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footgrid">
+      <img class="logo logo-foot" src="img/logo.png" alt="Логотип «Поехали с друзьями»">
+      <div class="foottext">
+        <span class="footbrand">Поехали с друзьями &middot; Макс Фрай</span>
+        <span class="mono">Черновик программы &middot; октябрь 2026</span>
+        <a href="https://t.me/+La_7w6y0A0BiMzYy" target="_blank" rel="noopener">Чат поездки в Телеграме</a>
+      </div>
+      <a class="qr" href="https://t.me/+La_7w6y0A0BiMzYy" target="_blank" rel="noopener">
+        <img src="img/qr-chat.png" alt="QR-код на чат поездки в Телеграме">
+        <span>Наведи камеру<br>и попадёшь в чат</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body></html>
